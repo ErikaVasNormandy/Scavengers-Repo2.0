@@ -1,5 +1,8 @@
 import React from 'react';
 import axios from 'axios';
+import ListComponent from './ContentListComponent';
+import ContainerComponent from './ContainerComponent';
+
 
 class HomeComponent extends React.Component{
 	constructor(props){
@@ -10,7 +13,7 @@ class HomeComponent extends React.Component{
 			htmlcontents:"",
 			testcontents:"",
 			listOfNamesToQuery:[],
-			queriedHTML: ""
+			queriedHTML: []
 		}
 		this.myDivToFocus = React.createRef()
 		this.getContents = this.getContents.bind(this);
@@ -22,6 +25,12 @@ class HomeComponent extends React.Component{
 		this.getContents()
 
 }
+/*
+	componentDidUpdate(){
+		this.getContents()
+
+}
+*/
 	
 	handleOnClick = (event) =>{
 		if(this.myDivToFocus.current){
@@ -51,14 +60,22 @@ class HomeComponent extends React.Component{
 						contents: res.data
 						//htmlcontents: atob(res.data.content)
 						})
-					console.log(this.state.contents.length)
+//					console.log(this.state.contents.length)
 
 					var placeholder = this.state.contents.length
-					console.log("Hello from get contents")
+					//console.log("Hello from get contents")
 					for(var i=0;i<placeholder; i++){
 						//console.log("contents are: ", this.state.contents[i])
 						var stringQuery = "https://api.github.com/repos/erikavasnormandy/ErikaVasNormandy.github.io/contents/HomePosts/" + this.state.contents[i].name
-						console.log(stringQuery)
+						//console.log(stringQuery)
+						axios.get(stringQuery)
+						.then(res=>{
+							if(res.data){
+								this.setState({ queriedHTML: this.state.queriedHTML.concat(atob(res.data.content))})
+								//console.log("calling from the getContents inner loop ", this.state.queriedHTML)
+							}
+						})
+						.catch(err =>console.log(err))
 					}
 					
 //			this.handleContents()
@@ -66,6 +83,7 @@ class HomeComponent extends React.Component{
 		
 		.catch(err => console.log(err))
 		
+	console.log("calling from the getContents ", this.state.queriedHTML)
 
 		
 	}
@@ -94,7 +112,14 @@ class HomeComponent extends React.Component{
 		}			
 	}
 
- 	
+	createMarkup(input){return{ __html: input}
+}
+	
+/*
+	createMarkup(){
+		return{ __html: this.state.queriedHTML }
+}	
+ */	
 	render()
 	{
 		let {queriedHTML} = this.state;
@@ -106,17 +131,25 @@ class HomeComponent extends React.Component{
 				
 				<p>Body Component right here</p>
 				<p>query {console.log( "calling from main" , this.state.queriedHTML)}</p>
-{/*				
+				<p>{this.state.queriedHTML}</p>
+				{/*<div dangerouslySetInnerHTML={ this.createMarkup()}></div>*/}
+
+				
 			<ul>{
 					this.state.queriedHTML.map(item => (
 						<li key={item}> 
-							{this.state.queriedHTML}
+
+						<p>now modified with markup</p>
+						<div dangerouslySetInnerHTML={ this.createMarkup(item)}></div>
 						</li>
 					))
 				}
 				</ul>
-				
-*/}
+			
+
+		{/*			<ListComponent contents={queriedHTML} />
+
+				*/}
 
 				<p>Body Component right here</p>
 				<p>Body Component right here</p>
