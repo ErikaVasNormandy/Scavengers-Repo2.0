@@ -1,9 +1,8 @@
 import React from 'react';
 import axios from 'axios';
-import ListComponent from './ContentListComponent';
-import ContainerComponent from './ContainerComponent';
+import TileComponent from './TileComponent';
 
-
+import {styles} from './home.css';
 class HomeComponent extends React.Component{
 	constructor(props){
 		super(props)
@@ -13,11 +12,12 @@ class HomeComponent extends React.Component{
 			htmlcontents:"",
 			testcontents:"",
 			listOfNamesToQuery:[],
+			rawActualContents:[],
 			queriedHTML: []
 		}
 		this.myDivToFocus = React.createRef()
 		this.getContents = this.getContents.bind(this);
-		this.handleContents = this.handleContents.bind(this);
+
 
 
 	}
@@ -88,29 +88,7 @@ class HomeComponent extends React.Component{
 		
 	}
 
-	handleContents(){
-		var placeholder = this.state.contents.length
-//		console.log("array length is :", this.state.contents.length)
-//				console.log("contents should be: ", this.state.contents)
-		for(var i=0;i<placeholder; i++){
-			console.log("content is: ", this.state.contents[i].name)
-			this.state.listOfNamesToQuery.push(this.state.contents[i].name)
-		
-
-		}
-		
-		for(var i=0;i<placeholder; i++){
-			console.log("listofnamestoquery", this.state.listOfNamesToQuery[i])
-			var stringQuery = "https://api.github.com/repos/erikavasnormandy/ErikaVasNormandy.github.io/contents/HomePosts/" + this.state.listOfNamesToQuery[i]
-			axios.get(stringQuery).then(res=>{ if(res.data){ 
-		//console.log(res.data)
-			this.setState({ queriedHTML: res.data})
-		console.log("queried html:", this.state.queriedHTML) 
- }})
-		
-		.catch(err => console.log(err))	
-		}			
-	}
+	
 
 	createMarkup(input){return{ __html: input}
 }
@@ -130,30 +108,28 @@ class HomeComponent extends React.Component{
 
 				
 				<p>Body Component right here</p>
-				<p>query {console.log( "calling from main" , this.state.queriedHTML)}</p>
-				<p>{this.state.queriedHTML}</p>
+
+				{/*<p>{this.state.queriedHTML}</p>*/}
 				{/*<div dangerouslySetInnerHTML={ this.createMarkup()}></div>*/}
 
 				
 			<ul>{
 					this.state.queriedHTML.map(item => (
-						<li key={item}> 
+						
+				<li key={item}> 
 
 						<p>now modified with markup</p>
+						<TileComponent bodyProp={item}/>
 						<div dangerouslySetInnerHTML={ this.createMarkup(item)}></div>
+
 						</li>
 					))
 				}
-				</ul>
+			</ul>
 			
 
-		{/*			<ListComponent contents={queriedHTML} />
 
-				*/}
 
-				<p>Body Component right here</p>
-				<p>Body Component right here</p>
-				<p>Body Component right here</p>
 				<p>Body Component right here</p>
 				<p>Body Component right here</p>
 				<div ref={this.myDivToFocus}>

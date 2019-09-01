@@ -5,23 +5,20 @@ import moment from 'moment';
 
 
 
-const createMarkup = encodedHtml => ({
-  __html: _.unescape(encodedHtml),
-});
-
 
 class TileComponent extends Component {
 	constructor(props){
 		super(props);
 		this.createMarkup = this.createMarkup.bind(this)
 	}
-
-	createMarkup() {
-  	return {__html: 'First &middot; Second'};
+	
+	createMarkup(input){return{ __html: input}
 	}
+	
 
+	
 	state = {
-		action: "",
+
 		titleProp: "", 
 		bodyProp: "",
 		dateProp: Date(),
@@ -33,7 +30,7 @@ class TileComponent extends Component {
 		const displayDate = moment(this.props.dateProp).format('ddd, DD-MMM-YYYY')
 
 		return(
-				<div id = "tileComponent">
+			<div id = "tileComponent">
 
  
                 {/* Top Part of the "Photo" */}
@@ -49,22 +46,11 @@ class TileComponent extends Component {
 					</div>
 						
 
-
-                {/* Display the images by applying a 'map' */}
-                <ul>
-					{this.props.imagesProp.map(image => {
-               		 	return(
-                 		 	<li key={image}> 
-                 		 		<div className="baseImageContainer"><img src={image} alt="Huh, looks like the image moved"/></div>
-	                	  		
-	                	  	</li>
-               			)})}
-				</ul>
- 					<div className="displayText" dangerouslySetInnerHTML={createMarkup(this.props.bodyProp)} />
+ 			<div className="displayText" dangerouslySetInnerHTML={this.createMarkup(this.props.bodyProp)} />
 
 
  	
-				</div>
+			</div>
 
 			)
 	}

@@ -9,7 +9,8 @@ class AboutComponent extends React.Component{
       	<div className = "col s7, m7, l7 columnAbout">
       		<h2>About </h2>
       			
-      			<img className="profilePicture" src="" alt="Huh image must have moved"></img>
+      			<img className="profilePicture" src="./jar_cosmic.png
+" alt="Huh image must have moved"></img>
       			<p>Erika Hudiono is a Bay Area Techie with an interest in both digital and traditional art, games, creative writing, crafting a la apps, and various other gimmicks. </p>
       			<p>Erika frequently applies a unique approach to her work as a security engineer and technical analyst. When not collecting various hats for SRE and developer roles, she is known for illustration and digital art. </p>
       	</div>
@@ -21,7 +22,7 @@ class AboutComponent extends React.Component{
       	  		<p>Github: <a href="https://github.com/ErikaVasNormandy"> Erika Vas Normandy</a></p>
       	  		<p>Linkedin: <a href="https://www.linkedin.com/in/erika-hudiono/">Erika Hudiono</a></p>
       	  		<p>Instagram <a href="https://www.instagram.com/curiousquarian/"> Portfolio</a></p>
-      	  		<img className="profilePicture" src="https://scontent-sjc3-1.xx.fbcdn.net/v/t1.0-9/43245675_10212775561373104_7715986176934412288_n.jpg?_nc_cat=110&_nc_ht=scontent-sjc3-1.xx&oh=bb3a53ba5c5bf937b2d81c9aaa43fd98&oe=5CF4AD6A" alt = "Huh image must have moved datacenters"/>
+      	  		<img className="profilePicture" src="./jar_cosmic.png" alt = "Huh image must have moved datacenters"/>
       	  </div>
       </div>
     );
