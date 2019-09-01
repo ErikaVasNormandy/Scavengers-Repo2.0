@@ -1,0 +1,240 @@
+.navBar, .is-scrolled .site-header, .blog .site-header, .home .site-header {
+    background-color: #292c2f;
+	text-decoration: none;
+  
+}
+a{
+	text-decoration: none;
+}
+.home .site-header, .blog .site-header {
+    background-color: rgba(36,38,41,.4);
+}
+.site-header, .is-singular .site .site-header, .admin-bar .site-header, .admin-bar.is-singular .site-header {
+    display: block;
+    padding: 2rem 2rem 0;
+    position: relative;
+    top: 0;
+    width: 100%;
+}
+.site-header {
+    min-height: 0 !important;
+}
+.site-header, .admin-bar .site-header, .admin-bar.is-singular .site-header {
+    position: absolute;
+    top: 0;
+}
+.site-header {
+    background-color: rgba(36,38,41,.8);
+    color: #fff;
+    display: table;
+    left: 0;
+    min-height: 90px;
+
+    padding-bottom: 15px;
+    padding-top: 15px;
+    padding-left:0px;
+    padding-right:0px;
+
+    position: fixed;
+    right: 0;
+    text-shadow: 0 0 3px rgba(0,0,0,.3);
+    top: 0;
+    width: 100%;
+    z-index: 5;
+	text-decoration: none;
+
+}
+
+article, aside, details, figcaption, figure, footer, header, main, menu, nav, section, summary {
+    display: block;
+}
+#site-navigation{
+	font-size: 1.4rem;
+	
+}
+
+#site-navigation ul, #site-navigation li{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+  	display: inline-block;
+	letter-spacing: .1em;
+	font-weight: bold;
+	padding: 4px 4px 4px;
+	padding-left: 20px;
+	padding-right: 20px;
+ 	text-align: full-width;
+	
+	font-family: 'Alegreya SC',serif;
+/*	font-family: 'Arvo',serif;*/
+/*	font-family: 'Red Hat Text',sans-serif;*/
+	/*font-family: 'Hepta Slab',serif;*/
+
+}
+
+#site-navigation a{
+	color: #fff;
+	display: inline-block;
+	transition: opacity .3s;
+}
+
+
+#site-navigation a:hover{
+	color: #bbb;
+}
+
+.hoveringLink{
+  padding-left: 5%;
+  padding-right: 5%;
+  overflow-wrap: break-word;
+  font-size: 14px;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  width: 10em;
+  background-color: rgba(0,0,0,0);
+}
+
+
+
+hr{
+  border-color: black;
+  color: black;
+  border-style: double;
+  
+}
+
+.temp_menu{
+	display: none;
+}
+
+#DropDownMenu{
+	display:none;
+}
+
+
+
+.tableOfContents button {
+	margin-right: 20px;
+  	display: inline-block;
+	letter-spacing: .1em;
+	font-weight: bold;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top:5px;
+	padding-bottom: 5px;
+ 	text-align: full-width;
+	background-color: rgba(0,0,0,0);
+	font-family: 'Alegreya SC',serif;
+	float: right;
+	color: rgb(240, 240,240);
+	font-size: 1.2em;
+	border-radius: 0px;
+	outline: 0;
+	border: 0.6;
+	background: none;
+
+}
+button:hover{
+	color: #bbb;
+	opacity: 0.8;
+}
+ 
+.displayWindow{
+    border-radius: 15px;
+    overflow: auto;
+    margin-right: 1%;
+    margin-bottom: 10px;
+    margin-top: 2vh;
+    display: inline;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-bottom: 1%;
+    border-style: double;
+    border-width: medium;
+    border-color: black;
+    float: right;
+    display: inline-block;
+    width: 80%;
+    min-height: 1vh;
+    font-family: 'Palatino','Palatino Linotype';
+}
+
+/*/////////////////////////////////// Mobile Rendering ////////////////////// */
+@media only screen and (max-width: 850px) {
+
+	.displayWindow{
+	width: 96%;
+
+}
+
+    .main-navigation{
+	display:none;
+}
+    .menu-item{
+    	overflow-x:hidden;
+    	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
+
+
+    }
+	.temp_menu{
+		display: inline;
+	margin-right: 20px;
+  	display: inline-block;
+	letter-spacing: .1em;
+	font-weight: bold;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top:5px;
+	padding-bottom: 5px;
+ 	text-align: full-width;
+	background-color: rgba(0,0,0,0);
+	font-family: 'Alegreya SC',serif;
+	float: right;
+	color: rgb(240, 240,240);
+	font-size: 1.2em;
+	border-radius: 0px;
+		outline: 0;
+	border: 0.6;
+		background: none;
+
+	}
+
+
+     #DropDownMenu{
+	display: inline-block;
+	width: 100%;
+
+}
+
+   #DropDownMenu,   #DropDownMenu ul{
+	letter-spacing: .1em;
+	font-weight: bold;
+	color: #eee;
+	}
+
+#DropDownMenu ul{
+	list-style-type: none;
+}
+
+#DropDownMenu li{
+	display: block;
+}
+
+#DropDownMenu a{
+	width: 100%;
+	background-color: rgba(0.2,0.2,0.2,0.2);
+
+	margin: 1px 1px 1px 1px;
+
+	padding: 0.5em 0.5em 0.5em 0.5em;
+
+	text-align: right;
+	float: right;
+	font-family: 'Alegreya SC',serif;
+
+	color: rgb(240, 240,240);
+}
+
+  
+}
