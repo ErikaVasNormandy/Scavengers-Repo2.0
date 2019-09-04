@@ -1,3 +1,10 @@
+.mainWindow{
+	background-color: white;
+	/*background-image: url('./vector demask.jpg');*/
+
+}
+
+
 .navBar, .is-scrolled .site-header, .blog .site-header, .home .site-header {
     background-color: #292c2f;
 	text-decoration: none;

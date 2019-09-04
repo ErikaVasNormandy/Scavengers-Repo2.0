@@ -106,7 +106,7 @@ class NavBar extends Component {
 	<WindowComponent/>
         <hr/>
 
-        <div className="row">
+        <div className="row mainWindow">
         
           <div className="col s2 m2 l2">
 		<BusinessCardComponent/>
