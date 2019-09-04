@@ -1,5 +1,16 @@
 import React from 'react';
 import {styles} from './sketchbook.css';
+import {absinthe} from './digital/absinthe.png';
+import {cosmicjar} from './digital/jar_cosmic.png';
+import  {medicinebun} from './digital/MedicineBun.png';
+import {PlagueTale1} from './digital/PlagueTale1';
+import {sekirogourd} from './digital/SekiroGourd - digital - Large.png';
+import {regexpimain} from './digital/RegexPiMain.png';
+
+import {celebrationcake } from './ink/celebrationcake.png';
+import {mtgisland} from './ink/mtg island.png';
+import {porttown} from './ink/porttown.png';
+
 
 class SketchbookComponent extends React.Component{
 	constructor(props){
@@ -47,7 +58,6 @@ class SketchbookComponent extends React.Component{
 		}
 	}
 
-
 	
 	render()
 	{
@@ -68,7 +78,21 @@ class SketchbookComponent extends React.Component{
 			<p>I try to use Artstation as my main source for prints and such. RedBubble is a bit more tailored for gimmicks and whatnot.</p>	
 	<p> To do: upload some samples of art to showcase</p>
 				<h2 ref={this.bringInkToFocus}>Ink</h2>
+					<img src = {mtgisland}></img>
+					<img src = {porttown}></img>
+
+					<img src = {celebrationcake}></img>
+
 				<h2 ref={this.bringDigitalToFocus}>Digital</h2>
+					<img src = {regexpimain}></img>
+
+					<img src = {absinthe}></img>
+
+					<img src = {cosmicjar}></img>
+
+					<img src = {medicinebun}></img>
+					<img src = {PlagueTale1}></img>
+					<img src = {sekirogourd}></img>
 
 				<h2 ref={this.bringScrapbookToFocus}>Scrapbook</h2>
 
