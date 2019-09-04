@@ -1,15 +1,15 @@
 import React from 'react';
 import {styles} from './sketchbook.css';
-import {absinthe} from './digital/absinthe.png';
-import {cosmicjar} from './digital/jar_cosmic.png';
-import  {medicinebun} from './digital/MedicineBun.png';
-import {PlagueTale1} from './digital/PlagueTale1';
-import {sekirogourd} from './digital/SekiroGourd - digital - Large.png';
-import {regexpimain} from './digital/RegexPiMain.png';
+import absinthe from './digital/absinthe.jpg';
+import cosmicjar from './digital/jar_cosmic.png';
+import medicinebun from './digital/MedicineBun.png';
+import PlagueTale1 from './digital/PlagueTale1.png';
+import sekirogourd from './digital/SekiroGourd - Digital - Large.png';
+import regexpimain from './digital/RegexPiMain.png';
 
-import {celebrationcake } from './ink/celebrationcake.png';
-import {mtgisland} from './ink/mtg island.png';
-import {porttown} from './ink/porttown.png';
+import celebrationcake from './ink/celebrationcake.jpg';
+import mtgisland from './ink/mtg island.jpg';
+import porttown from './ink/porttown.jpg';
 
 
 class SketchbookComponent extends React.Component{
@@ -62,7 +62,8 @@ class SketchbookComponent extends React.Component{
 	render()
 	{
 		return(
-			<div>
+			<div className="sketchbook">
+
 			<h1>Sketchbook</h1>
 				<div className="tableOfContents">
 
@@ -78,21 +79,21 @@ class SketchbookComponent extends React.Component{
 			<p>I try to use Artstation as my main source for prints and such. RedBubble is a bit more tailored for gimmicks and whatnot.</p>	
 	<p> To do: upload some samples of art to showcase</p>
 				<h2 ref={this.bringInkToFocus}>Ink</h2>
-					<img src = {mtgisland}></img>
-					<img src = {porttown}></img>
+					<img src = {mtgisland} alt="Moved"/>
 
-					<img src = {celebrationcake}></img>
 
-				<h2 ref={this.bringDigitalToFocus}>Digital</h2>
-					<img src = {regexpimain}></img>
+					<img src = {celebrationcake} alt="Moved"/>					<img src = {porttown} alt="Moved"/>
 
-					<img src = {absinthe}></img>
+				<h2 ref={this.bringDigitalToFocus} alt="Moved">Digital</h2>
+					<img src = {regexpimain} alt="Moved"/>
 
-					<img src = {cosmicjar}></img>
+					<img src = {absinthe} alt="Moved"/>
 
-					<img src = {medicinebun}></img>
-					<img src = {PlagueTale1}></img>
-					<img src = {sekirogourd}></img>
+					<img src = {cosmicjar} alt="Moved"/>
+
+					<img src = {medicinebun} alt="Moved"/>
+					<img src = {PlagueTale1} alt="Moved"/>
+					<img src = {sekirogourd} alt="Moved"/>
 
 				<h2 ref={this.bringScrapbookToFocus}>Scrapbook</h2>
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import {styles} from './aboutcss.css';
-import cosmicJar from './jar_cosmic.png';
+
 import roundrobin from './roundrobin.png';
 import trixiepixie from './TrixiePixieProfile.png';
 
