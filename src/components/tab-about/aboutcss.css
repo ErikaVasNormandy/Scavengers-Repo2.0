@@ -1,8 +1,17 @@
 .columnAbout{
-	padding: 30px 30px 30px 30px !important;
+	padding-left: 10px;
+	padding-right: 5px;
+	float: left;
+	width: 48%;
 
 }
 
+.row:after{
+	content:"";
+	display: table;
+	clear: both;
+
+}
 .profilePicture{
-	width: 50%;
+	width: 80%;
 }
