@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import _ from 'lodash';
+
 import moment from 'moment';
+
+import {styles} from './tile.css';
 
 
 
@@ -22,7 +24,7 @@ class TileComponent extends Component {
 		titleProp: "", 
 		bodyProp: "",
 		dateProp: Date(),
-		imagesProp: []
+		buttonProp: ""
 	}
 
 
@@ -48,7 +50,7 @@ class TileComponent extends Component {
 
  			<div className="displayText" dangerouslySetInnerHTML={this.createMarkup(this.props.bodyProp)} />
 
-
+				<button><a href={this.props.buttonProp}>Full Page {this.props.buttonProp}</a></button>
  	
 			</div>
 

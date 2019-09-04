@@ -1,8 +1,10 @@
 import React from 'react';
 import axios from 'axios';
-import TileComponent from './TileComponent';
+import TileComponent from '../BaseTile/TileComponent';
 
 import {styles} from './home.css';
+
+
 class HomeComponent extends React.Component{
 	constructor(props){
 		super(props)
@@ -25,12 +27,6 @@ class HomeComponent extends React.Component{
 		this.getContents()
 
 }
-/*
-	componentDidUpdate(){
-		this.getContents()
-
-}
-*/
 	
 	handleOnClick = (event) =>{
 		if(this.myDivToFocus.current){
@@ -71,14 +67,15 @@ class HomeComponent extends React.Component{
 						axios.get(stringQuery)
 						.then(res=>{
 							if(res.data){
-								this.setState({ queriedHTML: this.state.queriedHTML.concat(atob(res.data.content))})
+								this.setState({queriedHTML: this.state.queriedHTML.concat(res.data)})
+								//this.setState({ queriedHTML: this.state.queriedHTML.concat(atob(res.data.content))})
 								//console.log("calling from the getContents inner loop ", this.state.queriedHTML)
 							}
 						})
 						.catch(err =>console.log(err))
 					}
 					
-//			this.handleContents()
+
  			}})
 		
 		.catch(err => console.log(err))
@@ -89,60 +86,26 @@ class HomeComponent extends React.Component{
 	}
 
 	
-
-	createMarkup(input){return{ __html: input}
-}
-	
-/*
-	createMarkup(){
-		return{ __html: this.state.queriedHTML }
-}	
- */	
 	render()
 	{
 		let {queriedHTML} = this.state;
+
 		return(
 			<div onLoad={this.getContents}>
-			<h1>Home</h1>
-			<button onClick={this.getContents} >CLick Me</button>
-
-				
-				<p>Body Component right here</p>
-
+				<h1>Home</h1>
+				{/*<button onClick={this.getContents} >CLick Me</button> */}	
 				{/*<p>{this.state.queriedHTML}</p>*/}
 				{/*<div dangerouslySetInnerHTML={ this.createMarkup()}></div>*/}
-
 				
-			<ul>{
+				<ul>{
 					this.state.queriedHTML.map(item => (
 						
-				<li key={item}> 
-
-						<p>now modified with markup</p>
-						<TileComponent bodyProp={item}/>
-						<div dangerouslySetInnerHTML={ this.createMarkup(item)}></div>
-
+						<li key={item}> 
+							<TileComponent bodyProp={atob(item.content)} buttonProp={"https://erikavasnormandy.github.io/HomePosts/".concat(item.name)}/>
 						</li>
 					))
 				}
-			</ul>
-			
-
-
-
-				<p>Body Component right here</p>
-				<p>Body Component right here</p>
-				<div ref={this.myDivToFocus}>
-					Cape Cod
-				</div>
-
-				<p>Body Component right here</p>
-				<p>Body Component right here</p>
-				<p>Body Component right here</p>
-				<p>Body Component right here</p>
-				<p>Body Component right here</p>
-				<p>Body Component right here</p>
-				<p>Body Component right here</p>
+				</ul>
 			</div>		
 		);
 	}	
