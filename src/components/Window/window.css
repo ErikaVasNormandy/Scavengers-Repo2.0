@@ -1,6 +1,6 @@
 .window{
     background-color: #fafafa;
-    background-image: url(https://i.redd.it/7f0sg5nimk821.png);
+/*    background-image: url(https://i.redd.it/7f0sg5nimk821.png);*/
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: 50%;
@@ -10,6 +10,8 @@
     width: 100%;
     top: 0;
     display: table;
+	height: 200px;
+  /* background-image: url(./summer/reddit-sokolovo-ukraine.jpg);*/
 
 }
 

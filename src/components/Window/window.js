@@ -1,80 +1,104 @@
 import React, { Component } from 'react';
+
 import {styles} from './window.css';
+
+import susakura from './spring/steven-universe---sakura-tree.gif';
+import alpinemeadow from './spring/alpinemeadow.jpg';
+
+import gravityfalls from './summer/gravity-falls.jpg';
+import sokolovo from './summer/reddit-sokolovo-ukraine.jpg';
+import songoftheseaday from './summer/songofthesea-day.png';
+import songoftheseamorning from './summer/songofthesea-morning.jpg';
+import songoftheseanight from './summer/songofthesea-night.png';
+
+import otgw0 from './autumn/overthegardenwall.jpg';
+import otgw1 from './autumn/overthegardenwall1.jpg';
+import otgw2 from './autumn/over-the-garden-wall-desktop-12.png';
+
+import sucosmic from './winter/stevenuniverse-cosmic.png';
+import coldbeach from './winter/gHQr2Tr.jpg';
+
+
+const bg0={
+		backgroundImage: `url(${susakura})`		
+}
+     const bg1={
+        backgroundImage: `url(${gravityfalls})`
+    }
+     const bg2={
+        backgroundImage: `url(${sokolovo})`
+    }
+
+     const bg3={
+        backgroundImage: `url(${songoftheseaday})`
+    }
+     const bg4={
+        backgroundImage: `url(${songoftheseamorning})`
+    }
+     const bg5={
+        backgroundImage: `url(${songoftheseanight})`
+    }
+     const bg6={
+        backgroundImage: `url(${sucosmic})`
+    }
+
+    const bg7={
+        backgroundImage: `url(${alpinemeadow})`
+    }
+    const bg8={
+        backgroundImage: `url(${coldbeach})`
+    }
+
+
+    const bg9={
+        backgroundImage: `url(${otgw0})`
+    }
+    const bg10={
+        backgroundImage: `url(${otgw1})`
+    }
+    const bg11={
+        backgroundImage: `url(${otgw2})`
+    }
+
+	var inlineStylesArray = [bg0,bg1,bg2,bg3,bg4,bg5,bg6,bg7,bg8,bg9,bg10,bg11]
+
+
+
 
 var moment = require('moment');
 
-var imageArray= [
-      "https://s3-us-west-1.amazonaws.com/scavengers-repo.com/images/WinterMoodBoard/gHQr2Tr.jpg",
-      "https://i.redd.it/dwsod4t24n921.jpg",
-      "https://i.redd.it/7oah0nilwhp11.jpg",
-
-      "https://preview.redd.it/chnpav915zf21.jpg?width=640&crop=smart&auto=webp&s=c3f839233b82303af62a6e0923a8a1ad20496698",
-      // "https://images7.alphacoders.com/735/thumb-1920-735799.png",
-      "https://wallpapercave.com/wp/wp2682163.png",
-      "https://images2.alphacoders.com/735/thumb-1920-735771.png",
-      "https://images8.alphacoders.com/625/thumb-1920-625703.jpg",
-      // "https://www.jpl.nasa.gov/visions-of-the-future/images/earth-small.jpg",
-      "https://images4.alphacoders.com/836/thumb-1920-836209.jpg",
-      "https://i.pinimg.com/originals/bc/42/77/bc42777fcca60501522eea7fc16becba.jpg",
-
-      "https://i.imgur.com/IElwzES.png",
-      "http://i.imgur.com/jVayW4g.png",
 
 
-      ]
-
- var images = []
 class WindowComponent extends Component {
   	constructor(props){
   		super(props);
 
-      this.shuffleArray = this.shuffleArray.bind(this)
-      this.setSectionStyle = this.setSectionStyle.bind(this)
-
+    
   		this.state = {
         time: moment().format('ddd LTS'),
   			imgUrl: "https://s3-us-west-1.amazonaws.com/scavengers-repo.com/images/WinterMoodBoard/gHQr2Tr.jpg",
-        randImgUrl: this.shuffleArray(this.imageArray)
+
   		}
 
   	 }
-    getInitialState() {
-      this.setSectionStyle()
-    }
-
-
-    shuffleArray() {
-        const i = imageArray.length;
-        const j = Math.floor(Math.random() * (i));
-        return imageArray[j]
-    }
-
-    setSectionStyle(){
-        const backgroundimagechanged ={
-        backgroundImage:`url(${this.shuffleArray()})`
-    }
-      return backgroundimagechanged
-
-    }
-
-
 
 	render() {
 		// let sectionStyle = {
 		// 	backgroundImage:`url(${this.state.randImgUrl})`
-		// }
+		// }}
 
 
     	return (
 
     		<div>
-      		<div className = "window" style={this.setSectionStyle()}>
+      		<div className = "window" style={inlineStylesArray[Math.floor(Math.random() * (inlineStylesArray.length))]}>
                     <h1 className="windowDisplay windowText">Scavenger's Repo</h1>
                     <h5 className="windowDisplay">{this.state.time}</h5>
                     <br/>
  					{/* <span className="windowText">{this.shuffleArray()}</span> */}
 
       		</div>
+
 
 
       		</div>
