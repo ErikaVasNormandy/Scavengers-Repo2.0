@@ -169,8 +169,9 @@ button:hover{
 /*/////////////////////////////////// Mobile Rendering ////////////////////// */
 @media only screen and (max-width: 850px) {
 
-	.displayWindow{
+.displayWindow{
 	width: 96%;
+	margin-right: 0;
 
 }
 
