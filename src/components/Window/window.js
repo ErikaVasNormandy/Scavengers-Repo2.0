@@ -17,7 +17,7 @@ import otgw2 from './autumn/over-the-garden-wall-desktop-12.png';
 
 import sucosmic from './winter/stevenuniverse-cosmic.png';
 import coldbeach from './winter/gHQr2Tr.jpg';
-
+import montstmichel from './winter/Reaching-for-Heaven-by-thedronelad-UK-Konrad-ParuchAGORA-images-5d6fc6b3d4603__880.jpg';
 
 const bg0={
 		backgroundImage: `url(${susakura})`		
@@ -40,6 +40,7 @@ const bg0={
     }
      const bg6={
         backgroundImage: `url(${sucosmic})`
+
     }
 
     const bg7={
@@ -60,7 +61,11 @@ const bg0={
         backgroundImage: `url(${otgw2})`
     }
 
-	var inlineStylesArray = [bg0,bg1,bg2,bg3,bg4,bg5,bg6,bg7,bg8,bg9,bg10,bg11]
+    const bg12={
+    	backgroundImage: `url(${montstmichel})`
+    }
+
+	var inlineStylesArray = [bg0,bg1,bg2,bg3,bg4,bg5,bg6,bg7,bg8,bg9,bg10,bg11,bg12]
 
 
 
