@@ -268,6 +268,37 @@ class WorldBuildingComponent extends React.Component{
 }
 
 	getCharactersContents(){
+axios.get('https://api.github.com/repos/erikavasnormandy/ErikaVasNormandy.github.io/contents/WorldbuildingPosts/Characters/', { headers: {Authorization: `Bearer ${process.env.REACT_APP_GITHUB_ACCESS_TOKEN}`}  }).
+			then(res=>{ 
+				if(res.data){ 
+					this.setState({ 
+						rawCharacters: res.data
+						})
+
+
+					var placeholder = this.state.rawCharacters.length
+
+					for(var i=0;i<placeholder; i++){
+
+						var stringQuery = "https://api.github.com/repos/erikavasnormandy/ErikaVasNormandy.github.io/contents/WorldbuildingPosts/Characters/" + this.state.rawCharacters[i].name
+
+						axios.get(stringQuery, { headers: {Authorization: `Bearer ${process.env.REACT_APP_GITHUB_ACCESS_TOKEN}`}  })
+						.then(res=>{
+							if(res.data){
+								this.setState({ charactersObjects: this.state.charactersObjects.concat(res.data)})
+					console.log(this.state.charactersObjects)
+					
+							}
+						})
+						.catch(err =>console.log(err))
+					}
+					
+
+ 			}})
+		
+		.catch(err => console.log(err))
+
+
 }
 
 
@@ -437,6 +468,16 @@ class WorldBuildingComponent extends React.Component{
 		</div>
                	<div ref={this.focusCharacters}>
                 	<h2>Characters</h2>
+			<ul>{
+				this.state.charactersObjects.map(item => (
+						
+						<li key={item}> 
+							<TileComponent bodyProp={atob(item.content)} buttonProp={"https://erikavasnormandy.github.io/WorldbuildingPosts/Characters/".concat(item.name)}/>
+						</li>
+					))
+				}
+				</ul>
+
 		</div>
                 <div ref={this.focusConceptScrapbook}>
 			<h2>Notes</h2>
