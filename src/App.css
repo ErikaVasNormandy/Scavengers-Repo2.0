@@ -1,3 +1,13 @@
+
+.customWidget{
+
+  position: fixed;
+  color: rgba(255,255,255,0.5);
+  padding: 2% 2% 2% 2%;
+  font-size: 0.8em;
+  width: 100px;
+}
+
 .App {
   text-align: center;
 }

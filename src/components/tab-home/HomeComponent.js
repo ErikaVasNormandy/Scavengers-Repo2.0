@@ -24,7 +24,6 @@ class HomeComponent extends React.Component{
 		this.getContents = this.getContents.bind(this);
 
 
-
 	}
 	componentDidMount(){
 		this.getContents()
@@ -88,7 +87,6 @@ class HomeComponent extends React.Component{
 		
 		.catch(err => console.log(err))
 		
-	console.log("calling from the getContents ", this.state.queriedHTML)
 
 		
 	}
