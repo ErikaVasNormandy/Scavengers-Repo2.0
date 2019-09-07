@@ -72,7 +72,7 @@ class HomeComponent extends React.Component{
 						//console.log("contents are: ", this.state.contents[i])
 						var stringQuery = "https://api.github.com/repos/erikavasnormandy/ErikaVasNormandy.github.io/contents/HomePosts/" + this.state.contents[i].name
 						//console.log(stringQuery)
-						axios.get(stringQuery)
+						axios.get(stringQuery, { headers: {Authorization: `Bearer ${process.env.REACT_APP_GITHUB_ACCESS_TOKEN}`}  })
 						.then(res=>{
 							if(res.data){
 								this.setState({queriedHTML: this.state.queriedHTML.concat(res.data)})

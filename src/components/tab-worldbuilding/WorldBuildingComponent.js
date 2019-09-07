@@ -162,7 +162,7 @@ class WorldBuildingComponent extends React.Component{
 	getAtomcraftContents(){
 //			rawAtomcraft:[],
 //			atomcraftObjects:[],
-		axios.get('https://api.github.com/repos/erikavasnormandy/ErikaVasNormandy.github.io/contents/WorldbuildingPosts/Atomcraft/').
+		axios.get('https://api.github.com/repos/erikavasnormandy/ErikaVasNormandy.github.io/contents/WorldbuildingPosts/Atomcraft/', { headers: {Authorization: `Bearer ${process.env.REACT_APP_GITHUB_ACCESS_TOKEN}`}  }).
 			then(res=>{ 
 				if(res.data){ 
 					this.setState({ 
@@ -176,7 +176,7 @@ class WorldBuildingComponent extends React.Component{
 
 						var stringQuery = "https://api.github.com/repos/erikavasnormandy/ErikaVasNormandy.github.io/contents/WorldbuildingPosts/Atomcraft/" + this.state.rawAtomcraft[i].name
 
-						axios.get(stringQuery)
+						axios.get(stringQuery, { headers: {Authorization: `Bearer ${process.env.REACT_APP_GITHUB_ACCESS_TOKEN}`}  })
 						.then(res=>{
 							if(res.data){
 								this.setState({atomcraftObjects: this.state.atomcraftObjects.concat(res.data)})
@@ -199,7 +199,7 @@ class WorldBuildingComponent extends React.Component{
 	getEnvironmentContents(){
 //			rawAtomcraft:[],
 //			atomcraftObjects:[],
-		axios.get('https://api.github.com/repos/erikavasnormandy/ErikaVasNormandy.github.io/contents/WorldbuildingPosts/Environment/').
+		axios.get('https://api.github.com/repos/erikavasnormandy/ErikaVasNormandy.github.io/contents/WorldbuildingPosts/Environment/', { headers: {Authorization: `Bearer ${process.env.REACT_APP_GITHUB_ACCESS_TOKEN}`}  }).
 			then(res=>{ 
 				if(res.data){ 
 					this.setState({ 
@@ -213,7 +213,7 @@ class WorldBuildingComponent extends React.Component{
 
 						var stringQuery = "https://api.github.com/repos/erikavasnormandy/ErikaVasNormandy.github.io/contents/WorldbuildingPosts/Environment/" + this.state.rawEnvironment[i].name
 
-						axios.get(stringQuery)
+						axios.get(stringQuery, { headers: {Authorization: `Bearer ${process.env.REACT_APP_GITHUB_ACCESS_TOKEN}`}  })
 						.then(res=>{
 							if(res.data){
 								this.setState({environmentObjects: this.state.environmentObjects.concat(res.data)})
@@ -234,7 +234,7 @@ class WorldBuildingComponent extends React.Component{
 
 //			rawAtomcraft:[],
 //			atomcraftObjects:[],
-		axios.get('https://api.github.com/repos/erikavasnormandy/ErikaVasNormandy.github.io/contents/WorldbuildingPosts/Politics/').
+		axios.get('https://api.github.com/repos/erikavasnormandy/ErikaVasNormandy.github.io/contents/WorldbuildingPosts/Politics/', { headers: {Authorization: `Bearer ${process.env.REACT_APP_GITHUB_ACCESS_TOKEN}`}  }).
 			then(res=>{ 
 				if(res.data){ 
 					this.setState({ 
@@ -248,7 +248,7 @@ class WorldBuildingComponent extends React.Component{
 
 						var stringQuery = "https://api.github.com/repos/erikavasnormandy/ErikaVasNormandy.github.io/contents/WorldbuildingPosts/Politics/" + this.state.rawPolitics[i].name
 
-						axios.get(stringQuery)
+						axios.get(stringQuery, { headers: {Authorization: `Bearer ${process.env.REACT_APP_GITHUB_ACCESS_TOKEN}`}  })
 						.then(res=>{
 							if(res.data){
 								this.setState({politicsObjects: this.state.politicsObjects.concat(res.data)})

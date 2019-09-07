@@ -34,7 +34,7 @@ class ProjectsComponent extends React.Component{
  
 
 	getProjectContents(){
-		axios.get('https://api.github.com/repos/erikavasnormandy/ErikaVasNormandy.github.io/contents/Projects').then(res=>{
+		axios.get('https://api.github.com/repos/erikavasnormandy/ErikaVasNormandy.github.io/contents/Projects', { headers: {Authorization: `Bearer ${process.env.REACT_APP_GITHUB_ACCESS_TOKEN}`}  }).then(res=>{
 		if(res.data){
 			this.setState({ contents: res.data })
 			var placeholder = this.state.contents.length
@@ -42,7 +42,7 @@ class ProjectsComponent extends React.Component{
 			
 			for(var i=0;i<placeholder; i++){
 				var stringQuery = "https://api.github.com/repos/erikavasnormandy/ErikaVasNormandy.github.io/contents/Projects/" + this.state.contents[i].name
-				axios.get(stringQuery)
+				axios.get(stringQuery, { headers: {Authorization: `Bearer ${process.env.REACT_APP_GITHUB_ACCESS_TOKEN}`}  })
 					.then(res=>{
 						if(res.data){
 								this.setState({queriedHTML: this.state.queriedHTML.concat(res.data)})

@@ -75,7 +75,7 @@ class SketchbookComponent extends React.Component{
 				</ul>
 				</div>
 	
-			<p>{console.log("hello from sketchbook")}Here's a preview of what I do. You can find my full shop on <a href="https://erikavasnormandy.artstation.com">Artstation</a>, <a href="https://instagram.com/s0meCasual">Instagram</a> and <a href="https://redbubble.com/people/Technomancer-01?asc=u">RedBubble</a>.'</p>
+			<p>{console.log("hello from sketchbook")}Here's a preview of what I do. You can find my full shop on <a href="https://erikavasnormandy.artstation.com">Artstation</a>, <a href="https://instagram.com/s0meCasual">Instagram</a> and <a href="https://redbubble.com/people/Technomancer-01?asc=u">RedBubble</a>.</p>
 			<p>I try to use Artstation as my main source for prints and such. RedBubble is a bit more tailored for gimmicks and whatnot.</p>	
 	<p> To do: upload some samples of art to showcase</p>
 				<h2 ref={this.bringInkToFocus}>Ink</h2>
