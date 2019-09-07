@@ -91,7 +91,7 @@ class HomeComponent extends React.Component{
 		let {queriedHTML} = this.state;
 
 		return(
-			<div onLoad={this.getContents}>
+			<div >
 				<h1>Home</h1>
 				{/*<button onClick={this.getContents} >CLick Me</button> */}	
 				{/*<p>{this.state.queriedHTML}</p>*/}

@@ -1,14 +1,24 @@
 import React from 'react';
 import axios from 'axios';
 import {styles} from './worldbuilding.css';
-
+import TileComponent from '../BaseTile/TileComponent';
 
 class WorldBuildingComponent extends React.Component{
 	constructor(props){
 		super(props)
 		this.state={
-			field: "value",
-			contents:""
+			rawSetting:[],
+			settingObjects:[],
+			rawAtomcraft:[],
+			atomcraftObjects:[],
+			rawEnvironment:[],
+			environmentObjects:[],
+			rawPolitics:[],
+			politicsObjects:[],
+			rawCharacters:[],
+			charactersObjects:[],
+			rawNotes:[],
+			notesObjects:[],
 		}
 
 
@@ -21,8 +31,28 @@ class WorldBuildingComponent extends React.Component{
 		this.focusCharacters = React.createRef()
 		this.focusConceptScrapbook = React.createRef()
 
+		this.getSettingContents = this.getSettingContents.bind(this)
+		this.getAtomcraftContents = this.getAtomcraftContents.bind(this)
+		this.getEnvironmentContents = this.getEnvironmentContents.bind(this)
+		this.getPoliticsContents = this.getPoliticsContents.bind(this)
+		this.getCharactersContents = this.getCharactersContents.bind(this)
+		this.getNotesContents = this.getNotesContents.bind(this)
+		this.getContents = this.getContents.bind(this)
 	}
 	
+	getContents(){
+		this.getSettingContents()
+		this.getAtomcraftContents()
+		this.getEnvironmentContents()
+		this.getPoliticsContents()
+		this.getCharactersContents()
+		this.getNotesContents()
+
+}
+	componentDidMount(){
+		this.getContents()
+
+}
 	handleOnClick = (event) =>{
 		if(this.myDivToFocus.current){
 			this.myDivToFocus.current.scrollIntoView({
@@ -92,6 +122,164 @@ class WorldBuildingComponent extends React.Component{
 			})
 		}
 	}
+
+	getSettingContents(){
+///		rawSetting:[],
+///		settingObjects:[],
+		axios.get('https://api.github.com/repos/erikavasnormandy/ErikaVasNormandy.github.io/contents/WorldbuildingPosts/Setting/').
+			then(res=>{ 
+				if(res.data){ 
+					this.setState({ 
+						rawSetting: res.data
+						})
+
+
+					var placeholder = this.state.rawSetting.length
+
+					for(var i=0;i<placeholder; i++){
+
+						var stringQuery = "https://api.github.com/repos/erikavasnormandy/ErikaVasNormandy.github.io/contents/WorldbuildingPosts/Setting/" + this.state.rawSetting[i].name
+
+						axios.get(stringQuery)
+						.then(res=>{
+							if(res.data){
+								this.setState({settingObjects: this.state.settingObjects.concat(res.data)})
+					console.log(this.state.settingObjects)
+					
+							}
+						})
+						.catch(err =>console.log(err))
+					}
+					
+
+ 			}})
+		
+		.catch(err => console.log(err))
+
+}
+
+
+	getAtomcraftContents(){
+//			rawAtomcraft:[],
+//			atomcraftObjects:[],
+		axios.get('https://api.github.com/repos/erikavasnormandy/ErikaVasNormandy.github.io/contents/WorldbuildingPosts/Atomcraft/').
+			then(res=>{ 
+				if(res.data){ 
+					this.setState({ 
+						rawAtomcraft: res.data
+						})
+
+
+					var placeholder = this.state.rawAtomcraft.length
+
+					for(var i=0;i<placeholder; i++){
+
+						var stringQuery = "https://api.github.com/repos/erikavasnormandy/ErikaVasNormandy.github.io/contents/WorldbuildingPosts/Atomcraft/" + this.state.rawAtomcraft[i].name
+
+						axios.get(stringQuery)
+						.then(res=>{
+							if(res.data){
+								this.setState({atomcraftObjects: this.state.atomcraftObjects.concat(res.data)})
+					console.log(this.state.atomcraftObjects)
+					
+							}
+						})
+						.catch(err =>console.log(err))
+					}
+					
+
+ 			}})
+		
+		.catch(err => console.log(err))
+
+
+}
+
+
+	getEnvironmentContents(){
+//			rawAtomcraft:[],
+//			atomcraftObjects:[],
+		axios.get('https://api.github.com/repos/erikavasnormandy/ErikaVasNormandy.github.io/contents/WorldbuildingPosts/Environment/').
+			then(res=>{ 
+				if(res.data){ 
+					this.setState({ 
+						rawEnvironment: res.data
+						})
+
+
+					var placeholder = this.state.rawEnvironment.length
+
+					for(var i=0;i<placeholder; i++){
+
+						var stringQuery = "https://api.github.com/repos/erikavasnormandy/ErikaVasNormandy.github.io/contents/WorldbuildingPosts/Environment/" + this.state.rawEnvironment[i].name
+
+						axios.get(stringQuery)
+						.then(res=>{
+							if(res.data){
+								this.setState({environmentObjects: this.state.environmentObjects.concat(res.data)})
+					console.log(this.state.environmentObjects)
+					
+							}
+						})
+						.catch(err =>console.log(err))
+					}
+					
+
+ 			}})
+		
+		.catch(err => console.log(err))
+}
+
+	getPoliticsContents(){
+
+//			rawAtomcraft:[],
+//			atomcraftObjects:[],
+		axios.get('https://api.github.com/repos/erikavasnormandy/ErikaVasNormandy.github.io/contents/WorldbuildingPosts/Politics/').
+			then(res=>{ 
+				if(res.data){ 
+					this.setState({ 
+						rawPolitics : res.data
+						})
+
+
+					var placeholder = this.state.rawPolitics.length
+
+					for(var i=0;i<placeholder; i++){
+
+						var stringQuery = "https://api.github.com/repos/erikavasnormandy/ErikaVasNormandy.github.io/contents/WorldbuildingPosts/Politics/" + this.state.rawPolitics[i].name
+
+						axios.get(stringQuery)
+						.then(res=>{
+							if(res.data){
+								this.setState({politicsObjects: this.state.politicsObjects.concat(res.data)})
+					console.log(this.state.politicsObjects)
+					
+							}
+						})
+						.catch(err =>console.log(err))
+					}
+					
+
+ 			}})
+		
+		.catch(err => console.log(err))
+
+
+}
+
+	getCharactersContents(){
+}
+
+
+	getNotesContents(){
+}
+
+
+
+
+
+
+
 
 	loadCreativeSnippets(){
 		{/*axios.get('https://api.github.com/repos/erikavasnormandy/ErikaVasNormandy.github.io/contents/ArdaHyperion/Characters/Spring/XanderLangley/index.html').then(res=>{ if(res.data){ this.setState({ contents: res.data}) }}).catch(err => console.log(err))
@@ -191,15 +379,61 @@ class WorldBuildingComponent extends React.Component{
 	
                 <div ref={this.focusSetting}>
 			<h2>Setting</h2>
+			<ul>{
+				this.state.settingObjects.map(item => (
+						
+						<li key={item}> 
+							<TileComponent bodyProp={atob(item.content)} buttonProp={"https://erikavasnormandy.github.io/WorldbuildingPosts/Setting/".concat(item.name)}/>
+						</li>
+					))
+				}
+				</ul>
+			
 		</div>
                 <div ref={this.focusAtomcraft}>
                 	<h2>Atomcraft</h2>
+			
+
+			<ul>{
+				this.state.atomcraftObjects.map(item => (
+						
+						<li key={item}> 
+							<TileComponent bodyProp={atob(item.content)} buttonProp={"https://erikavasnormandy.github.io/WorldbuildingPosts/Atomcraft/".concat(item.name)}/>
+						</li>
+					))
+				}
+				</ul>
+
+
 		</div>
                 <div ref={this.focusEnvironment}>
 			<h2>Environment</h2>
+
+
+			<ul>{
+				this.state.environmentObjects.map(item => (
+						
+						<li key={item}> 
+							<TileComponent bodyProp={atob(item.content)} buttonProp={"https://erikavasnormandy.github.io/WorldbuildingPosts/Environment/".concat(item.name)}/>
+						</li>
+					))
+				}
+				</ul>
 		</div>
                 <div ref={this.focusPolitics}>
                 	<h2>Politics</h2>
+			<ul>{
+				this.state.politicsObjects.map(item => (
+						
+						<li key={item}> 
+							<TileComponent bodyProp={atob(item.content)} buttonProp={"https://erikavasnormandy.github.io/WorldbuildingPosts/Politics/".concat(item.name)}/>
+						</li>
+					))
+				}
+				</ul>
+
+
+
 		</div>
                	<div ref={this.focusCharacters}>
                 	<h2>Characters</h2>
@@ -212,25 +446,7 @@ class WorldBuildingComponent extends React.Component{
 
 
 
-				{console.log("Hello from world building")}
-
-				<p> </p>
-				
-				<p>Body Component right here</p>
-				<div ref={this.myDivToFocus}>
-					Cape Cod
-				</div>
-
-				<p>Body Component right here</p>
-				<p>Body Component right here</p>
-				
-				<p>Body Component right here</p>
-				<p>Body Component right here</p>
-				<p>Body Component right here</p>
-				<p>Body Component right here</p>
-				<p>Body Component right here</p>
-				<p>Body Component right here</p>
-				<p>Body Component right here</p>
+		
 			</div>	
 </div>	
 		);
