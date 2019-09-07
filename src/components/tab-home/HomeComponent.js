@@ -4,6 +4,9 @@ import TileComponent from '../BaseTile/TileComponent';
 
 import {styles} from './home.css';
 
+import dotenv from 'dotenv';
+
+require('dotenv').config();
 
 class HomeComponent extends React.Component{
 	constructor(props){
@@ -49,7 +52,12 @@ class HomeComponent extends React.Component{
 		*/
 		
 		/// Get first a list of all the *.html files in that directory
-		axios.get('https://api.github.com/repos/erikavasnormandy/ErikaVasNormandy.github.io/contents/HomePosts').
+
+///	axios.get('https://api.github.com/repos/erikavasnormandy/ErikaVasNormandy.github.io/contents/HomePosts', { headers: {Authorization: `Bearer  `}  }
+
+
+		axios.get('https://api.github.com/repos/erikavasnormandy/ErikaVasNormandy.github.io/contents/HomePosts', { headers: {Authorization: `Bearer ${process.env.REACT_APP_GITHUB_ACCESS_TOKEN}`}  }
+).
 			then(res=>{ 
 				if(res.data){ 
 					this.setState({ 
@@ -57,7 +65,7 @@ class HomeComponent extends React.Component{
 						//htmlcontents: atob(res.data.content)
 						})
 //					console.log(this.state.contents.length)
-
+					
 					var placeholder = this.state.contents.length
 					//console.log("Hello from get contents")
 					for(var i=0;i<placeholder; i++){
