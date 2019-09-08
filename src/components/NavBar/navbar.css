@@ -23,7 +23,6 @@ a{
     background-color: rgba(36,38,41,.4);
 }
 .site-header, .is-singular .site .site-header, .admin-bar .site-header, .admin-bar.is-singular .site-header {
-    display: block;
     padding: 2rem 2rem 0;
     position: relative;
     top: 0;

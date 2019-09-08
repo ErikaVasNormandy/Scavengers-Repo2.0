@@ -99,11 +99,8 @@ class HomeComponent extends React.Component{
 		return(
 			<div >
 				<h1>Home</h1>
-				{/*<button onClick={this.getContents} >CLick Me</button> */}	
-				{/*<p>{this.state.queriedHTML}</p>*/}
-				{/*<div dangerouslySetInnerHTML={ this.createMarkup()}></div>*/}
 				
-				<ul>{
+				<ul className = "home">{
 					this.state.queriedHTML.map(item => (
 						
 						<li key={item}> 

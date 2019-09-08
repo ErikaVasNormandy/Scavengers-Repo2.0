@@ -35,52 +35,6 @@ textarea {
 	display: block;
 }
 
-.deleteButton{
-  margin-bottom: 50px;
-  margin-left: 48%;
-}
-.tileComponent{
-  border-radius: 15px;
-  background-color: rgba(10,10,10,0.2); 
-  color: black;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  width: 60%;
-  min-height: 805px;
-  margin: auto;
-  margin-bottom: 1%;
-}
-
-.tileComponent img {
-  width: 100%;
-  background-position: center center;
-  background-repeat: no-repeat;
-  overflow: hidden;
-}
-
-.tileComponent h5{
-  white-space: pre-wrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  font-size: 200%;
-  font-weight: bold;
-  padding: 10px 10px 10px 10px;
-}
-
-.newPost{
-    border-style: solid;
-    text-align: left;
-    width: 100%;
-    min-height: 64px;
-    color: black !;
-    margin-left: 1%;
-    color: black !important;
-    margin-left: auto !important;
-    padding: 10px 10px 10px 10px;
-    border-radius: 10px;
-
-}
-
 
 .baseImageContainer{
   width: 100%;

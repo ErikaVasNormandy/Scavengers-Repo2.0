@@ -13,7 +13,7 @@ class AboutComponent extends React.Component{
       		<h2>About </h2>	
       		<img className="profilePicture" src={trixiepixie} alt="Huh image must have moved"></img>
       		<p>Erika Hudiono is a security analyst and DevOps engineer in the Bay Area. In addition to a variety 
-          of hats in web app tech stack, she has an interest in digital painting, traditional illustration, creative writing, and the intersection
+          of hats in the web app tech stack, she has an interest in digital painting, traditional illustration, creative writing, and the intersection
           of those hobbies.  </p>
 
           <p>If you ever want an ice breaker, just say you like rabbits, show me your rabbit pictures, or even bring one if you too are a fan of Leporidae.</p>

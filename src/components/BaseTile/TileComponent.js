@@ -32,25 +32,16 @@ class TileComponent extends Component {
 		const displayDate = moment(this.props.dateProp).format('ddd, DD-MMM-YYYY')
 
 		return(
-			<div id = "tileComponent">
+			<div className = "tileComponent">
 
  
                 {/* Top Part of the "Photo" */}
-					<div className ="row">
-						<div className = "col s8 m8 l8">
-							<h5>{this.props.titleProp}</h5>
-						</div>
 
-
-						<div className = "col s4 m4 l4 baseDateStamp">
-							{displayDate}
-						</div>
-					</div>
 						
 
  			<div className="displayText" dangerouslySetInnerHTML={this.createMarkup(this.props.bodyProp)} />
 
-				<button><a href={this.props.buttonProp}>Full Page {this.props.buttonProp}</a></button>
+			<button className="fullPage"><a href={this.props.buttonProp}>Full Page -></a></button>
  	
 			</div>
 
