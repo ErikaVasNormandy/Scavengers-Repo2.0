@@ -1,28 +1,48 @@
 
 ul{
-	list-style-type: none;
+  list-style-type: none;
+}
+
+.worldbuildinglist{
+    position: fixed;
+    bottom: 10px;
+    list-style-type: none;
+    font-size: 0.5em;
+    margin-left: 0px;
+    padding-left: 0px;
+    background-color: rgba(0,0,0,0.8);
+
 }
 .worldbuildinglist ul{
 	list-style-type: none;
-	color: black;
+  background-color: ;
 	
 }
 
 .worldbuildinglist li{
-	width: 100%;
+  float: left;
+
+
 }
 .worldbuildinglist button{
-margin-right: 20px;
-  	display: inline-block;
+    color: white;
+
+    white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  display: inline-block;
 	letter-spacing: .1em;
 	font-weight: bold;
-	padding-left: 20px;
-	padding-right: 20px;
+	padding-left: 5px;
+	width: 100px;
+  text-align: left;
 	padding-top:5px;
 	padding-bottom: 5px;
  	text-align: full-width;
-	background-color: rgba(0,0,0,0);
+  text-overflow: ellipsis;
 	font-family: 'Alegreya SC',serif;
+
 
 
 	font-size: 1.2em;
@@ -32,6 +52,9 @@ margin-right: 20px;
 	background: none;
 }
 
+.worldbuildinglist button:active{
+  background-color: black;
+}
 #tileComponentWorldBuilding {
     border-radius: 15px;
     background-color: rgba(10,10,10,0.2); 

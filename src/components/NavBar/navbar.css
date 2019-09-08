@@ -1,9 +1,15 @@
 .mainWindow{
 	background-color: white;
+	padding-left: 0px;
+	padding-right: 0px;
 	/*background-image: url('./vector demask.jpg');*/
 
 }
-
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    	
+}	
 
 .navBar, .is-scrolled .site-header, .blog .site-header, .home .site-header {
     background-color: #292c2f;
@@ -54,6 +60,7 @@ a{
 
 article, aside, details, figcaption, figure, footer, header, main, menu, nav, section, summary {
     display: block;
+
 }
 #site-navigation{
 	font-size: 1.4rem;
@@ -164,24 +171,41 @@ button:hover{
     width: 80%;
     min-height: 1vh;
     font-family: 'Palatino','Palatino Linotype';
+
 }
+
 
 /*/////////////////////////////////// Mobile Rendering ////////////////////// */
 @media only screen and (max-width: 850px) {
 
 .displayWindow{
 	width: 96%;
-	margin-right: 0;
+
+	    max-width: 100%;
+    overflow-x: hidden;
+}
+.displayWindow ul{
+	margin-right: 10px;
+	padding-right: 2%;
+
+	margin-left: 5px;
+	padding-left: 0px;
+
+
 
 }
 
     .main-navigation{
 	display:none;
 }
+	.menu{
+		list-style-type: none;
+	}
+
     .menu-item{
     	overflow-x:hidden;
     	padding: 0px 0px 0px 0px;
-	margin: 0px 0px 0px 0px;
+		margin: 0px 0px 0px 0px;
 
 
     }

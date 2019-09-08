@@ -1,10 +1,21 @@
-.columnAbout{
+.columnAbout1{
 	padding-left: 10px;
 	padding-right: 5px;
 	float: left;
-	width: 48%;
+	width: 45%;
+	font-size: 0.8em;
 
 }
+
+.columnAbout2{
+	padding-left: 10px;
+	padding-right: 5px;
+	float: right;
+	width: 45%;
+	font-size: 0.8em;
+
+}
+
 
 .row:after{
 	content:"";
@@ -14,4 +25,9 @@
 }
 .profilePicture{
 	width: 80%;
+}
+
+.tags{
+	font-family: 'Hepta Slab',serif;
+	color: rgba(100,100,155,0.8);
 }

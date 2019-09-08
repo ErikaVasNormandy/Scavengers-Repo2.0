@@ -13,6 +13,7 @@ function App() {
 	<header>
       </header>
 	
+
 	<body>
 	<div className="customWidget"><GetReqComponent/></div>
 		<NavBarComponent/>

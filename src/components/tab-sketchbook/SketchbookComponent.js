@@ -5,7 +5,6 @@ import cosmicjar from './digital/jar_cosmic.png';
 import medicinebun from './digital/MedicineBun.png';
 import PlagueTale1 from './digital/PlagueTale1.png';
 import sekirogourd from './digital/SekiroGourd - Digital - Large.png';
-import regexpimain from './digital/RegexPiMain.png';
 
 import celebrationcake from './ink/celebrationcake.jpg';
 import mtgisland from './ink/mtg island.jpg';
@@ -28,7 +27,7 @@ class SketchbookComponent extends React.Component{
 		if(this.myDivToFocus.current){
 			this.myDivToFocus.current.scrollIntoView({
 				behavior: "smooth",
-				block: "nearest"	
+				block: "end"	
 			})
 		}
 	}
@@ -37,7 +36,7 @@ class SketchbookComponent extends React.Component{
 		if(this.bringInkToFocus.current){
 			this.bringInkToFocus.current.scrollIntoView({
 				behavior: "smooth",
-				block: "nearest"	
+				block: "center"	
 			})
 		}
 	}
@@ -45,7 +44,7 @@ class SketchbookComponent extends React.Component{
 		if(this.bringDigitalToFocus.current){
 			this.bringDigitalToFocus.current.scrollIntoView({
 				behavior: "smooth",
-				block: "nearest"	
+				block: "center"	
 			})
 		}
 	}
@@ -53,7 +52,7 @@ class SketchbookComponent extends React.Component{
 		if(this.bringScrapbookToFocus.current){
 			this.bringScrapbookToFocus.current.scrollIntoView({
 				behavior: "smooth",
-				block: "nearest"	
+				block: "start"	
 			})
 		}
 	}
@@ -85,15 +84,21 @@ class SketchbookComponent extends React.Component{
 					<img src = {celebrationcake} alt="Moved"/>					<img src = {porttown} alt="Moved"/>
 
 				<h2 ref={this.bringDigitalToFocus} alt="Moved">Digital</h2>
-					<img src = {regexpimain} alt="Moved"/>
 
-					<img src = {absinthe} alt="Moved"/>
+					
 
-					<img src = {cosmicjar} alt="Moved"/>
+					<img src = "https://s3-us-west-1.amazonaws.com/scavengers-repo.com/tab-artwork/digital/jar_cosmic.png" alt="Moved"/>
+					<img src = "https://s3-us-west-1.amazonaws.com/scavengers-repo.com/tab-artwork/digital/RegexPiMain-+small.png" alt="Moved"/>
 
-					<img src = {medicinebun} alt="Moved"/>
-					<img src = {PlagueTale1} alt="Moved"/>
-					<img src = {sekirogourd} alt="Moved"/>
+					<img src = "https://s3-us-west-1.amazonaws.com/scavengers-repo.com/tab-artwork/digital/MedicineBun.png" alt="Moved"/>
+				
+					<img src ="https://s3-us-west-1.amazonaws.com/scavengers-repo.com/tab-artwork/digital/Gabriella MacAlastair.png"/>
+					<img src="https://s3-us-west-1.amazonaws.com/scavengers-repo.com/tab-artwork/digital/JJRogers.png"/>
+					<img src = "https://s3-us-west-1.amazonaws.com/scavengers-repo.com/tab-artwork/digital/LovegoodHouse.png" alt="Moved"/>
+
+					<img src="https://s3-us-west-1.amazonaws.com/scavengers-repo.com/tab-artwork/digital/White+Rabbit.jpg"/>
+					<img src = "https://s3-us-west-1.amazonaws.com/scavengers-repo.com/tab-artwork/digital/absinthe.jpg" alt="Moved"/>
+					<img src = "https://s3-us-west-1.amazonaws.com/scavengers-repo.com/tab-artwork/digital/SekiroGourd+-+Digital+-+Large.png" alt="Moved"/>
 
 				<h2 ref={this.bringScrapbookToFocus}>Scrapbook</h2>
 

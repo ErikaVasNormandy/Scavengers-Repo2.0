@@ -28,7 +28,6 @@ class NavBar extends Component {
 	}
 
 
-
 	toggle(e){
 		this.setState({ showDropDownMenu: !this.state.showDropDownMenu });
 		
@@ -72,7 +71,7 @@ class NavBar extends Component {
 
 			<div id="DropDownMenu">
 
-      			<nav >
+      		<nav >
 				<ul>
       			<li className = "menu-item menu-item-type-custom menu-item-object-custom">
 							<Link to="/" >Home</Link>
@@ -115,7 +114,7 @@ class NavBar extends Component {
           <div className="col s9 m9 l9">
             <Switch>
 	             <div className  ="displayWindow">
-                     	<Route exact path = "/" component={HomeComponent} />
+                  <Route exact path = "/" component={HomeComponent} />
         	        <Route exact path="/projects" component={ProjectsComponent} />
         	        <Route exact path="/sketchbook" component={SketchbookComponent} />
         	        <Route exact path="/worldbuilding" component={WorldBuildingComponent}/>

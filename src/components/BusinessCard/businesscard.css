@@ -58,7 +58,7 @@
     }
     #contentContainer {
         float: none;
-        margin-left: 8%;
+        margin-left: 50%%;
 
     }
 }
@@ -139,7 +139,7 @@ a.sideMenuLinksA{
 }
 
 .sideMenuLinksA:hover{
-    background-color: #111;
+    color: #111;
     text-shadow: 0 0 0.2em #a8cbff, 0 0 0.2em #a8cbff;
 }
 

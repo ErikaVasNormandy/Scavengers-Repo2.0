@@ -81,18 +81,6 @@ class ProjectsComponent extends React.Component{
 				}
 				</ul>
 
-
-
-
-
-			<button onClick={this.handleOnClick} >CLick Me</button>
-
-				
-				<p>Body Component right here</p>
-				<div ref={this.myDivToFocus}>
-					Cape Cod
-				</div>
-
 				
 			</div>		
 		);

@@ -19,6 +19,8 @@ class WorldBuildingComponent extends React.Component{
 			charactersObjects:[],
 			rawNotes:[],
 			notesObjects:[],
+			selectedButton: ''
+
 		}
 
 
@@ -69,7 +71,7 @@ class WorldBuildingComponent extends React.Component{
 			})
 		}
 	}
-	handleSetting = (event) =>{
+	handleSetting = (event,id) =>{
 		if(this.focusSetting.current){
 			this.focusSetting.current.scrollIntoView({
 				behavior: "smooth",

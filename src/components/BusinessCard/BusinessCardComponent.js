@@ -14,7 +14,7 @@ class BusinessCardComponent extends Component {
           alt="Huh couldn't find it"></img>
 
           
-          <div className = "sideMenuText">Bronze-tier netrunner and sysadmin for web apps. I  Tech
+          <div className = "sideMenuText">Mid-tier netrunner and closeted antiquarian. 
             <ul className="sideMenuLinks">
                 <li className="sideMenuLinksLI"><a className="sideMenuLinksA" href="https://github.com/ErikaVasNormandy">Github</a></li>
                 <li className="sideMenuLinksLI"><a className= "sideMenuLinksA" href="https://www.linkedin.com/in/erika-hudiono-97a0285b">LinkedIn</a></li>
