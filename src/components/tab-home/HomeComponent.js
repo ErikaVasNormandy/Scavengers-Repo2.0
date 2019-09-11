@@ -97,10 +97,14 @@ class HomeComponent extends React.Component{
 		let {queriedHTML} = this.state;
 
 		return(
-			<div >
+			<div className="home">
 				<h1>Home</h1>
-				
-				<ul className = "home">{
+				  <div className="progress">
+				  loading bar
+   					   <div className="indeterminate" ></div>
+				  </div>
+        
+				<ul >{
 					this.state.queriedHTML.map(item => (
 						
 						<li key={item}> 

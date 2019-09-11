@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import TileComponent from '../BaseTile/TileComponent';
+import {styles} from '../tab-home/home.css';
 
 
 class ProjectsComponent extends React.Component{
@@ -67,7 +68,7 @@ class ProjectsComponent extends React.Component{
 	{
 		
 		return(
-			<div>
+			<div className="home">
 			<h1>Projects</h1>
 
 

@@ -1,12 +1,31 @@
 
-.displayText{
-  padding: 10px 10px 10px 10px;
-    margin-top: 10px;
-    overflow-y: scroll;
-    font-size: 1em;
-    height: 85%;
+.tileComponent{
+    width: 22vw;
+    border-radius: 15px;
+    background-color: rgba(240,240,240,1) !important;
+    color: black;
     overflow: hidden;
     text-overflow: ellipsis;
+    /* width: 45%; */
+    min-height: 400px;
+    margin-bottom: 1%;
+    /* margin-top: 50px !important; */
+    /* padding: 10px 10px 10px 10px; */
+    overflow-y: hidden;
+    font-size: 0.8em;
+    display: inline-block;
+    height: 400px;
+    text-overflow: ellipsis;
+}
+
+
+.displayText{
+  padding: 10px 10px 10px 10px; 
+    /* margin-top: 10px; */
+    /* overflow-y: scroll; */
+    font-size: 1em;
+    /* height: 85%; */
+    overflow: hidden;
 }
 textarea {
   padding: 5px 5px 5px 5px;
@@ -17,23 +36,6 @@ textarea {
 
 }
 
-.tileComponent{
-border-radius: 15px;
-    background-color: rgba(240,240,240,1) !important;
-    color: black;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    /* width: 45%; */
-    min-height: 400px;
-    margin-bottom: 1%;
-    /* margin-top: 50px !important; */
-    padding: 10px 10px 10px 10px;
-    overflow-y: hidden;
-    font-size: 0.8em;
-    display: inline-block;
-    height: 400px;
-    text-overflow: ellipsis;
-}
 
 .fullPage{
     float: right;
