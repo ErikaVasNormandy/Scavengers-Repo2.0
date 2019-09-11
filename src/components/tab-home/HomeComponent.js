@@ -2,7 +2,6 @@ import React from 'react';
 import axios from 'axios';
 import TileComponent from '../BaseTile/TileComponent';
 
-import LoadingBar from 'react-top-loading-bar';
 
 import {styles} from './home.css';
 import {overallstyles} from '../../App.css';
