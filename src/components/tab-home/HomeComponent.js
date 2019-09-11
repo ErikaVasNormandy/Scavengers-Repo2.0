@@ -2,7 +2,10 @@ import React from 'react';
 import axios from 'axios';
 import TileComponent from '../BaseTile/TileComponent';
 
+import LoadingBar from 'react-top-loading-bar';
+
 import {styles} from './home.css';
+import {overallstyles} from '../../App.css';
 
 import dotenv from 'dotenv';
 
@@ -18,13 +21,20 @@ class HomeComponent extends React.Component{
 			testcontents:"",
 			listOfNamesToQuery:[],
 			rawActualContents:[],
-			queriedHTML: []
+			queriedHTML: [],
+			loadingBarProgress:0,
+			hasLoaded: true
 		}
 		this.myDivToFocus = React.createRef()
 		this.getContents = this.getContents.bind(this);
 
+  }
 
-	}
+  	toggle(e){
+		this.setState({ hasLoaded: !this.state.hasLoaded });
+	
+}
+ 
 	componentDidMount(){
 		this.getContents()
 
@@ -51,10 +61,7 @@ class HomeComponent extends React.Component{
 		*/
 		
 		/// Get first a list of all the *.html files in that directory
-
 ///	axios.get('https://api.github.com/repos/erikavasnormandy/ErikaVasNormandy.github.io/contents/HomePosts', { headers: {Authorization: `Bearer  `}  }
-
-
 		axios.get('https://api.github.com/repos/erikavasnormandy/ErikaVasNormandy.github.io/contents/HomePosts', { headers: {Authorization: `Bearer ${process.env.REACT_APP_GITHUB_ACCESS_TOKEN}`}  }
 ).
 			then(res=>{ 
@@ -63,6 +70,7 @@ class HomeComponent extends React.Component{
 						contents: res.data
 						//htmlcontents: atob(res.data.content)
 						})
+					this.toggle()
 //					console.log(this.state.contents.length)
 					
 					var placeholder = this.state.contents.length
@@ -74,21 +82,17 @@ class HomeComponent extends React.Component{
 						axios.get(stringQuery, { headers: {Authorization: `Bearer ${process.env.REACT_APP_GITHUB_ACCESS_TOKEN}`}  })
 						.then(res=>{
 							if(res.data){
-								this.setState({queriedHTML: this.state.queriedHTML.concat(res.data)})
+								this.setState({queriedHTML: this.state.queriedHTML.concat(res.data),
+								})
 								//this.setState({ queriedHTML: this.state.queriedHTML.concat(atob(res.data.content))})
 								//console.log("calling from the getContents inner loop ", this.state.queriedHTML)
 							}
 						})
 						.catch(err =>console.log(err))
-					}
-					
-
+					}			
  			}})
 		
-		.catch(err => console.log(err))
-		
-
-		
+		.catch(err => console.log(err))	
 	}
 
 	
@@ -97,17 +101,19 @@ class HomeComponent extends React.Component{
 		let {queriedHTML} = this.state;
 
 		return(
-			<div className="home">
+			<div className="home" >
+	
+      {/*  	<button onClick={() => this.add(10)}>Add 10</button>*/}
+
 				<h1>Home</h1>
-				  <div className="progress">
-				  loading bar
-   					   <div className="indeterminate" ></div>
-				  </div>
-        
-				<ul >{
-					this.state.queriedHTML.map(item => (
+					{this.state.hasLoaded ? <div className="loader"></div>: null}
+
+				<ul >
+
+				{this.state.queriedHTML.map(item => (
 						
-						<li key={item}> 
+						<li key={item} > 		
+
 							<TileComponent bodyProp={atob(item.content)} buttonProp={"https://erikavasnormandy.github.io/HomePosts/".concat(item.name)}/>
 						</li>
 					))

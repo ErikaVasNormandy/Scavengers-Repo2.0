@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import {styles} from './worldbuilding.css';
 import TileComponent from '../BaseTile/TileComponent';
+import {overallstyles} from '../../App.css';
 
 class WorldBuildingComponent extends React.Component{
 	constructor(props){
@@ -19,7 +20,8 @@ class WorldBuildingComponent extends React.Component{
 			charactersObjects:[],
 			rawNotes:[],
 			notesObjects:[],
-			selectedButton: ''
+			selectedButton: '',
+			hasLoaded: true
 
 		}
 
@@ -42,6 +44,12 @@ class WorldBuildingComponent extends React.Component{
 		this.getContents = this.getContents.bind(this)
 	}
 	
+
+	  toggle(e){
+		this.setState({ hasLoaded: !this.state.hasLoaded });
+		
+}
+
 	getContents(){
 		this.getSettingContents()
 		this.getAtomcraftContents()
@@ -134,7 +142,7 @@ class WorldBuildingComponent extends React.Component{
 					this.setState({ 
 						rawSetting: res.data
 						})
-
+						this.toggle()
 
 					var placeholder = this.state.rawSetting.length
 
@@ -170,6 +178,7 @@ class WorldBuildingComponent extends React.Component{
 					this.setState({ 
 						rawAtomcraft: res.data
 						})
+						this.toggle()
 
 
 					var placeholder = this.state.rawAtomcraft.length
@@ -207,7 +216,7 @@ class WorldBuildingComponent extends React.Component{
 					this.setState({ 
 						rawEnvironment: res.data
 						})
-
+						this.toggle()
 
 					var placeholder = this.state.rawEnvironment.length
 
@@ -242,6 +251,7 @@ class WorldBuildingComponent extends React.Component{
 					this.setState({ 
 						rawPolitics : res.data
 						})
+						this.toggle()
 
 
 					var placeholder = this.state.rawPolitics.length
@@ -265,8 +275,6 @@ class WorldBuildingComponent extends React.Component{
  			}})
 		
 		.catch(err => console.log(err))
-
-
 }
 
 	getCharactersContents(){
@@ -276,6 +284,8 @@ axios.get('https://api.github.com/repos/erikavasnormandy/ErikaVasNormandy.github
 					this.setState({ 
 						rawCharacters: res.data
 						})
+						this.toggle()
+
 
 
 					var placeholder = this.state.rawCharacters.length
@@ -309,18 +319,6 @@ axios.get('https://api.github.com/repos/erikavasnormandy/ErikaVasNormandy.github
 
 
 
-
-
-
-
-
-	loadCreativeSnippets(){
-		{/*axios.get('https://api.github.com/repos/erikavasnormandy/ErikaVasNormandy.github.io/contents/ArdaHyperion/Characters/Spring/XanderLangley/index.html').then(res=>{ if(res.data){ this.setState({ contents: res.data}) }}).catch(err => console.log(err))
-		console.log("baseObject is ", this.state.contents)
-		*/}
-		
-
-}
 	render()
 	{
 		
@@ -339,11 +337,10 @@ axios.get('https://api.github.com/repos/erikavasnormandy/ErikaVasNormandy.github
                   <li><button onClick={this.handlePolitics}>Politics</button></li>
                   <li><button onClick={this.handleCharacters}>Characters</button></li>
                   <li><button onClick={this.handleConceptScrapbook}>Notes</button></li>
-
                 </ul>
 
  
-              <td></td>
+              <td>	{this.state.hasLoaded ? <div className="loader"></div>: null}  </td>
 
               <td>
                 <h3>How to Use This Page</h3>

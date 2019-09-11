@@ -41,7 +41,7 @@ class TileComponent extends Component {
 
  			<div className="displayText" dangerouslySetInnerHTML={this.createMarkup(this.props.bodyProp)} />
 
-			<button className="fullPage"><a href={this.props.buttonProp}>Full Page -></a></button>
+				<button className="fullPage"><a href={this.props.buttonProp}>Full Page -></a></button>
  	
 			</div>
 
