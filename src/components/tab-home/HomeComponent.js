@@ -141,7 +141,6 @@ class HomeComponent extends React.Component{
 			{this.state.queriedHTML.sort((a,b) =>a.name.localeCompare(b.name)).reverse().map(item => (
 
 						<li key={item} > 				
-							<p>{item.name}</p>
 							<TileComponent bodyProp={atob(item.content)} buttonProp={"https://erikavasnormandy.github.io/HomePosts/".concat(item.name)}/>
 						</li>
 					)
