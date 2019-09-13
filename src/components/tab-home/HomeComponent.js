@@ -138,7 +138,7 @@ class HomeComponent extends React.Component{
 
 {/*			{this.state.queriedHTML.sort((a,b) => a.name > b.name).map(item => (
 */}
-			{this.state.queriedHTML.sort((a,b) =>a.name.localeCompare(b.name)).reverse().map(item => (
+				{this.state.queriedHTML.sort((a,b) =>a.name.localeCompare(b.name)).reverse().map(item => (
 
 						<li key={item} > 				
 							<TileComponent bodyProp={atob(item.content)} buttonProp={"https://erikavasnormandy.github.io/HomePosts/".concat(item.name)}/>
@@ -146,8 +146,8 @@ class HomeComponent extends React.Component{
 					)
 					)
 				}
-				</ul>
 
+				</ul>
 
 
 
