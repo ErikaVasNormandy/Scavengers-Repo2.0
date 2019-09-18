@@ -99,8 +99,8 @@ textarea {
 
 /* Mobile Rendering */
 @media only screen and (max-width: 800px) {
-    #tileComponent {
-      width: 100%;
+    .tileComponent {
+      width: 90vw;
     }
     #contentContainer {
         float: none;
