@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import Countdown from './Countdown.js';
+
 import {styles} from './window.css';
 
 import susakura from './spring/steven-universe---sakura-tree.gif';
@@ -63,10 +65,7 @@ const bg0={
 	var inlineStylesArray = [bg0,bg1,bg2,bg3,bg4,bg5,bg6,bg7,bg8,bg9,bg10,bg11]
 
 
-
-
 var moment = require('moment');
-
 
 
 class WindowComponent extends Component {
@@ -93,7 +92,8 @@ class WindowComponent extends Component {
     		<div>
       		<div className = "window" style={inlineStylesArray[Math.floor(Math.random() * (inlineStylesArray.length))]}>
                     <h1 className="windowDisplay windowText">Scavenger's Repo</h1>
-                    <h5 className="windowDisplay">{this.state.time}</h5>
+                            <h5 className="windowDisplay"><Countdown date={`2020-09-18T00:00:00`} />
+                         </h5>
                     <br/>
  					{/* <span className="windowText">{this.shuffleArray()}</span> */}
 
