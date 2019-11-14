@@ -28,3 +28,11 @@
 }
 
 
+.Countdown-col{
+    padding-left: 2px;
+    padding-right: 2px;
+    letter-spacing: 2px 2px 2px 2px;
+     font-family: 'Merriweather',serif;
+    font-size: 1em;
+    color: rgb(230, 230, 230);
+}
