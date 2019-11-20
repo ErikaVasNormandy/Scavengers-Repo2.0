@@ -55,7 +55,8 @@ class ProjectsComponent extends React.Component{
 				var placeholder = this.state.contents.length
 				this.toggle()
 		
-			
+				var newSortedArray = this.state.contents.sort((a,b)=>   a.name > b.name)
+
 				for(var i=0;i<placeholder; i++){
 					var stringQuery = "https://api.github.com/repos/erikavasnormandy/ErikaVasNormandy.github.io/contents/Projects/" + this.state.contents[i].name
 					axios.get(stringQuery, { headers: {Authorization: `Bearer ${process.env.REACT_APP_GITHUB_ACCESS_TOKEN}`}  })
@@ -90,7 +91,7 @@ class ProjectsComponent extends React.Component{
 				<ul>
 
 				{
-					this.state.queriedHTML.map(item => (
+					this.state.queriedHTML.sort((a, b) => a.name.localeCompare(b.name)).reverse().map(item => (
 						<li key={item} > 		
 
 							<TileComponent bodyProp={atob(item.content)} buttonProp={"https://erikavasnormandy.github.io/Projects/".concat(item.name)}/>
