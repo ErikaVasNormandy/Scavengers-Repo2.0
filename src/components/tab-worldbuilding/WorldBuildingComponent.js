@@ -136,7 +136,7 @@ class WorldBuildingComponent extends React.Component{
 	getSettingContents(){
 ///		rawSetting:[],
 ///		settingObjects:[],
-		axios.get('https://api.github.com/repos/erikavasnormandy/ErikaVasNormandy.github.io/contents/WorldbuildingPosts/Setting/').
+		axios.get('https://api.github.com/repos/erikavasnormandy/ErikaVasNormandy.github.io/contents/Scavengers-Repo/WorldbuildingPosts/Setting/').
 			then(res=>{ 
 				if(res.data){ 
 					this.setState({ 
@@ -148,7 +148,7 @@ class WorldBuildingComponent extends React.Component{
 
 					for(var i=0;i<placeholder; i++){
 
-						var stringQuery = "https://api.github.com/repos/erikavasnormandy/ErikaVasNormandy.github.io/contents/WorldbuildingPosts/Setting/" + this.state.rawSetting[i].name
+						var stringQuery = "https://api.github.com/repos/erikavasnormandy/ErikaVasNormandy.github.io/contents/Scavengers-Repo/WorldbuildingPosts/Setting/" + this.state.rawSetting[i].name
 
 						axios.get(stringQuery)
 						.then(res=>{
@@ -172,7 +172,7 @@ class WorldBuildingComponent extends React.Component{
 	getAtomcraftContents(){
 //			rawAtomcraft:[],
 //			atomcraftObjects:[],
-		axios.get('https://api.github.com/repos/erikavasnormandy/ErikaVasNormandy.github.io/contents/WorldbuildingPosts/Atomcraft/', { headers: {Authorization: `Bearer ${process.env.REACT_APP_GITHUB_ACCESS_TOKEN}`}  }).
+		axios.get('https://api.github.com/repos/erikavasnormandy/ErikaVasNormandy.github.io/contents/Scavengers-Repo/WorldbuildingPosts/Atomcraft/', { headers: {Authorization: `Bearer ${process.env.REACT_APP_GITHUB_ACCESS_TOKEN}`}  }).
 			then(res=>{ 
 				if(res.data){ 
 					this.setState({ 
@@ -185,7 +185,7 @@ class WorldBuildingComponent extends React.Component{
 
 					for(var i=0;i<placeholder; i++){
 
-						var stringQuery = "https://api.github.com/repos/erikavasnormandy/ErikaVasNormandy.github.io/contents/WorldbuildingPosts/Atomcraft/" + this.state.rawAtomcraft[i].name
+						var stringQuery = "https://api.github.com/repos/erikavasnormandy/ErikaVasNormandy.github.io/contents/Scavengers-Repo/WorldbuildingPosts/Atomcraft/" + this.state.rawAtomcraft[i].name
 
 						axios.get(stringQuery, { headers: {Authorization: `Bearer ${process.env.REACT_APP_GITHUB_ACCESS_TOKEN}`}  })
 						.then(res=>{
@@ -210,7 +210,7 @@ class WorldBuildingComponent extends React.Component{
 	getEnvironmentContents(){
 //			rawAtomcraft:[],
 //			atomcraftObjects:[],
-		axios.get('https://api.github.com/repos/erikavasnormandy/ErikaVasNormandy.github.io/contents/WorldbuildingPosts/Environment/', { headers: {Authorization: `Bearer ${process.env.REACT_APP_GITHUB_ACCESS_TOKEN}`}  }).
+		axios.get('https://api.github.com/repos/erikavasnormandy/ErikaVasNormandy.github.io/contents/Scavengers-Repo/WorldbuildingPosts/Environment/', { headers: {Authorization: `Bearer ${process.env.REACT_APP_GITHUB_ACCESS_TOKEN}`}  }).
 			then(res=>{ 
 				if(res.data){ 
 					this.setState({ 
@@ -222,7 +222,7 @@ class WorldBuildingComponent extends React.Component{
 
 					for(var i=0;i<placeholder; i++){
 
-						var stringQuery = "https://api.github.com/repos/erikavasnormandy/ErikaVasNormandy.github.io/contents/WorldbuildingPosts/Environment/" + this.state.rawEnvironment[i].name
+						var stringQuery = "https://api.github.com/repos/erikavasnormandy/ErikaVasNormandy.github.io/contents/Scavengers-Repo/WorldbuildingPosts/Environment/" + this.state.rawEnvironment[i].name
 
 						axios.get(stringQuery, { headers: {Authorization: `Bearer ${process.env.REACT_APP_GITHUB_ACCESS_TOKEN}`}  })
 						.then(res=>{
@@ -245,7 +245,7 @@ class WorldBuildingComponent extends React.Component{
 
 //			rawAtomcraft:[],
 //			atomcraftObjects:[],
-		axios.get('https://api.github.com/repos/erikavasnormandy/ErikaVasNormandy.github.io/contents/WorldbuildingPosts/Politics/', { headers: {Authorization: `Bearer ${process.env.REACT_APP_GITHUB_ACCESS_TOKEN}`}  }).
+		axios.get('https://api.github.com/repos/erikavasnormandy/ErikaVasNormandy.github.io/contents/Scavengers-Repo/WorldbuildingPosts/Politics/', { headers: {Authorization: `Bearer ${process.env.REACT_APP_GITHUB_ACCESS_TOKEN}`}  }).
 			then(res=>{ 
 				if(res.data){ 
 					this.setState({ 
@@ -258,7 +258,7 @@ class WorldBuildingComponent extends React.Component{
 
 					for(var i=0;i<placeholder; i++){
 
-						var stringQuery = "https://api.github.com/repos/erikavasnormandy/ErikaVasNormandy.github.io/contents/WorldbuildingPosts/Politics/" + this.state.rawPolitics[i].name
+						var stringQuery = "https://api.github.com/repos/erikavasnormandy/ErikaVasNormandy.github.io/contents/Scavengers-Repo/WorldbuildingPosts/Politics/" + this.state.rawPolitics[i].name
 
 						axios.get(stringQuery, { headers: {Authorization: `Bearer ${process.env.REACT_APP_GITHUB_ACCESS_TOKEN}`}  })
 						.then(res=>{
@@ -278,7 +278,7 @@ class WorldBuildingComponent extends React.Component{
 }
 
 	getCharactersContents(){
-axios.get('https://api.github.com/repos/erikavasnormandy/ErikaVasNormandy.github.io/contents/WorldbuildingPosts/Characters/', { headers: {Authorization: `Bearer ${process.env.REACT_APP_GITHUB_ACCESS_TOKEN}`}  }).
+axios.get('https://api.github.com/repos/erikavasnormandy/ErikaVasNormandy.github.io/contents/Scavengers-Repo/WorldbuildingPosts/Characters/', { headers: {Authorization: `Bearer ${process.env.REACT_APP_GITHUB_ACCESS_TOKEN}`}  }).
 			then(res=>{ 
 				if(res.data){ 
 					this.setState({ 
@@ -292,7 +292,7 @@ axios.get('https://api.github.com/repos/erikavasnormandy/ErikaVasNormandy.github
 
 					for(var i=0;i<placeholder; i++){
 
-						var stringQuery = "https://api.github.com/repos/erikavasnormandy/ErikaVasNormandy.github.io/contents/WorldbuildingPosts/Characters/" + this.state.rawCharacters[i].name
+						var stringQuery = "https://api.github.com/repos/erikavasnormandy/ErikaVasNormandy.github.io/contents/Scavengers-Repo/WorldbuildingPosts/Characters/" + this.state.rawCharacters[i].name
 
 						axios.get(stringQuery, { headers: {Authorization: `Bearer ${process.env.REACT_APP_GITHUB_ACCESS_TOKEN}`}  })
 						.then(res=>{
@@ -413,7 +413,7 @@ axios.get('https://api.github.com/repos/erikavasnormandy/ErikaVasNormandy.github
 				this.state.settingObjects.map(item => (
 						
 						<li key={item}> 
-							<TileComponent bodyProp={atob(item.content)} buttonProp={"https://erikavasnormandy.github.io/WorldbuildingPosts/Setting/".concat(item.name)}/>
+							<TileComponent bodyProp={atob(item.content)} buttonProp={"https://erikavasnormandy.github.io/Scavengers-Repo/WorldbuildingPosts/Setting/".concat(item.name)}/>
 						</li>
 					))
 				}
@@ -428,7 +428,7 @@ axios.get('https://api.github.com/repos/erikavasnormandy/ErikaVasNormandy.github
 				this.state.atomcraftObjects.map(item => (
 						
 						<li key={item}> 
-							<TileComponent bodyProp={atob(item.content)} buttonProp={"https://erikavasnormandy.github.io/WorldbuildingPosts/Atomcraft/".concat(item.name)}/>
+							<TileComponent bodyProp={atob(item.content)} buttonProp={"https://erikavasnormandy.github.io/Scavengers-Repo/WorldbuildingPosts/Atomcraft/".concat(item.name)}/>
 						</li>
 					))
 				}
@@ -444,7 +444,7 @@ axios.get('https://api.github.com/repos/erikavasnormandy/ErikaVasNormandy.github
 				this.state.environmentObjects.map(item => (
 						
 						<li key={item}> 
-							<TileComponent bodyProp={atob(item.content)} buttonProp={"https://erikavasnormandy.github.io/WorldbuildingPosts/Environment/".concat(item.name)}/>
+							<TileComponent bodyProp={atob(item.content)} buttonProp={"https://erikavasnormandy.github.io/Scavengers-Repo/WorldbuildingPosts/Environment/".concat(item.name)}/>
 						</li>
 					))
 				}
@@ -456,7 +456,7 @@ axios.get('https://api.github.com/repos/erikavasnormandy/ErikaVasNormandy.github
 				this.state.politicsObjects.map(item => (
 						
 						<li key={item}> 
-							<TileComponent bodyProp={atob(item.content)} buttonProp={"https://erikavasnormandy.github.io/WorldbuildingPosts/Politics/".concat(item.name)}/>
+							<TileComponent bodyProp={atob(item.content)} buttonProp={"https://erikavasnormandy.github.io/Scavengers-Repo/WorldbuildingPosts/Politics/".concat(item.name)}/>
 						</li>
 					))
 				}
@@ -471,7 +471,7 @@ axios.get('https://api.github.com/repos/erikavasnormandy/ErikaVasNormandy.github
 				this.state.charactersObjects.map(item => (
 						
 						<li key={item}> 
-							<TileComponent bodyProp={atob(item.content)} buttonProp={"https://erikavasnormandy.github.io/WorldbuildingPosts/Characters/".concat(item.name)}/>
+							<TileComponent bodyProp={atob(item.content)} buttonProp={"https://erikavasnormandy.github.io/Scavengers-Repo/WorldbuildingPosts/Characters/".concat(item.name)}/>
 						</li>
 					))
 				}
