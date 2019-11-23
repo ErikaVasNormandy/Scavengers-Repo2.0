@@ -46,7 +46,7 @@ class ProjectsComponent extends React.Component{
  
 
 	getProjectContents(){
-		axios.get('https://api.github.com/repos/erikavasnormandy/ErikaVasNormandy.github.io/contents/Projects', { headers: {Authorization: `Bearer ${process.env.REACT_APP_GITHUB_ACCESS_TOKEN}`}  })
+		axios.get('https://api.github.com/repos/erikavasnormandy/ErikaVasNormandy.github.io/contents/Scavengers-Repo/Projects', { headers: {Authorization: `Bearer ${process.env.REACT_APP_GITHUB_ACCESS_TOKEN}`}  })
 		.then(res=>{
 			if(res.data){
 				this.setState({ 
@@ -58,7 +58,7 @@ class ProjectsComponent extends React.Component{
 				var newSortedArray = this.state.contents.sort((a,b)=>   a.name > b.name)
 
 				for(var i=0;i<placeholder; i++){
-					var stringQuery = "https://api.github.com/repos/erikavasnormandy/ErikaVasNormandy.github.io/contents/Projects/" + this.state.contents[i].name
+					var stringQuery = "https://api.github.com/repos/erikavasnormandy/ErikaVasNormandy.github.io/contents/Scavengers-Repo/Projects/" + this.state.contents[i].name
 					axios.get(stringQuery, { headers: {Authorization: `Bearer ${process.env.REACT_APP_GITHUB_ACCESS_TOKEN}`}  })
 					.then(res=>{
 						if(res.data){
@@ -94,7 +94,7 @@ class ProjectsComponent extends React.Component{
 					this.state.queriedHTML.sort((a, b) => a.name.localeCompare(b.name)).reverse().map(item => (
 						<li key={item} > 		
 
-							<TileComponent bodyProp={atob(item.content)} buttonProp={"https://erikavasnormandy.github.io/Projects/".concat(item.name)}/>
+							<TileComponent bodyProp={atob(item.content)} buttonProp={"https://erikavasnormandy.github.io/Scavengers-Repo/Projects/".concat(item.name)}/>
 						
 						</li>
 					))
