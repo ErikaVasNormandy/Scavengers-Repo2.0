@@ -61,7 +61,7 @@ class HomeComponent extends React.Component{
 		*/
 		/// Get first a list of all the *.html files in that directory
 ///	axios.get('https://api.github.com/repos/erikavasnormandy/ErikaVasNormandy.github.io/contents/HomePosts', { headers: {Authorization: `Bearer  `}  }
-		axios.get('https://api.github.com/repos/erikavasnormandy/ErikaVasNormandy.github.io/contents/HomePosts', { headers: {Authorization: `Bearer ${process.env.REACT_APP_GITHUB_ACCESS_TOKEN}`}  }
+		axios.get('https://api.github.com/repos/erikavasnormandy/ErikaVasNormandy.github.io/contents/Scavengers-Repo/HomePosts', { headers: {Authorization: `Bearer ${process.env.REACT_APP_GITHUB_ACCESS_TOKEN}`}  }
 ).
 			then(res=>{ 
 				if(res.data){ 
@@ -81,7 +81,7 @@ class HomeComponent extends React.Component{
 					//console.log("Hello from get contents")
 					for(var i=0;i<placeholder; i++){
 						//console.log("contents are: ", this.state.contents[i])
-						var stringQuery = "https://api.github.com/repos/erikavasnormandy/ErikaVasNormandy.github.io/contents/HomePosts/" + this.state.contents[i].name
+						var stringQuery = "https://api.github.com/repos/erikavasnormandy/ErikaVasNormandy.github.io/contents/Scavengers-Repo/HomePosts/" + this.state.contents[i].name
 						//console.log(stringQuery)
 
 						axios.get(stringQuery, { headers: {Authorization: `Bearer ${process.env.REACT_APP_GITHUB_ACCESS_TOKEN}`}  })
@@ -141,7 +141,7 @@ class HomeComponent extends React.Component{
 				{this.state.queriedHTML.sort((a,b) =>a.name.localeCompare(b.name)).reverse().map(item => (
 
 						<li key={item} > 				
-							<TileComponent bodyProp={atob(item.content)} buttonProp={"https://erikavasnormandy.github.io/HomePosts/".concat(item.name)}/>
+							<TileComponent bodyProp={atob(item.content)} buttonProp={"https://erikavasnormandy.github.io/Scavengers-Repo/HomePosts/".concat(item.name)}/>
 						</li>
 					)
 					)
