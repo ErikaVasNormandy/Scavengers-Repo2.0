@@ -39,10 +39,10 @@ class NavBar extends Component {
      <div>
       <BrowserRouter>
        <div> 
-	<header id="masthead" className="site-header" role="banner">
+	<header className="site-header" role="banner">
 	<button className="temp_menu" onClick={this.toggle}>menu</button>
       	<nav className ="main-navigation" id = "site-navigation">
-      	      <ul id = "primary-menu" className="menu nav-menu" >
+      	      <ul className="menu nav-menu" >
       			<li className = "menu-item menu-item-type-custom menu-item-object-custom">
               			<Link to="/" >Home</Link>
       			</li>

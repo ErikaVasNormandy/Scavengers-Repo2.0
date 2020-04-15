@@ -10,6 +10,10 @@ html, body {
     overflow-x: hidden;
     	
 }	
+.main-navigation{
+	height: 60px
+	;
+}
 
 .navBar, .is-scrolled .site-header, .blog .site-header, .home .site-header {
     background-color: #292c2f;
@@ -22,14 +26,9 @@ a{
 .home .site-header, .blog .site-header {
     background-color: rgba(36,38,41,.4);
 }
-.site-header, .is-singular .site .site-header, .admin-bar .site-header, .admin-bar.is-singular .site-header {
-    padding: 2rem 2rem 0;
-    position: relative;
-    top: 0;
-    width: 100%;
-}
+
 .site-header {
-    min-height: 0 !important;
+    min-height: 60px !important;
 }
 .site-header, .admin-bar .site-header, .admin-bar.is-singular .site-header {
     position: absolute;
@@ -40,13 +39,9 @@ a{
     color: #fff;
     display: table;
     left: 0;
-    min-height: 90px;
+    min-height: 60px;
 
-    padding-bottom: 15px;
-    padding-top: 15px;
-    padding-left:0px;
-    padding-right:0px;
-
+ 
     position: fixed;
     right: 0;
     text-shadow: 0 0 3px rgba(0,0,0,.3);
@@ -54,37 +49,38 @@ a{
     width: 100%;
     z-index: 5;
 	text-decoration: none;
-
+	justify-content: space-between;
+	overflow-x: auto;
+	overflow-y: hidden;
 }
 
 article, aside, details, figcaption, figure, footer, header, main, menu, nav, section, summary {
     display: block;
 
 }
-#site-navigation{
-	font-size: 1.4rem;
-	
-}
 
-#site-navigation ul, #site-navigation li{
+
+.menu {
+	float: right;
+	font-size: 1.2em;
 	list-style: none;
-	margin: 0;
-	padding: 0;
-  	display: inline-block;
+	
 	letter-spacing: .1em;
-	font-weight: bold;
-	padding: 4px 4px 4px;
-	padding-left: 20px;
-	padding-right: 20px;
+
  	text-align: full-width;
 	
-	font-family: 'Alegreya SC',serif;
+	font-family: 'Alegreya SC',sans-serif;
 /*	font-family: 'Arvo',serif;*/
 /*	font-family: 'Red Hat Text',sans-serif;*/
 	/*font-family: 'Hepta Slab',serif;*/
 
 }
 
+.menu li{
+	margin-left: 10px;
+	margin-right: 10px;
+	display: inline-flex;
+}
 #site-navigation a{
 	color: #fff;
 	display: inline-block;
@@ -179,8 +175,7 @@ button:hover{
 
 .displayWindow{
 	width: 96%;
-
-	    max-width: 100%;
+	max-width: 100%;
     overflow-x: hidden;
 }
 .displayWindow ul{
@@ -189,8 +184,6 @@ button:hover{
 
 	margin-left: 5px;
 	padding-left: 0px;
-
-
 
 }
 
@@ -205,13 +198,13 @@ button:hover{
     	overflow-x:hidden;
     	padding: 0px 0px 0px 0px;
 		margin: 0px 0px 0px 0px;
-
-
     }
+
 	.temp_menu{
 		display: inline;
-	margin-right: 20px;
-  	display: inline-block;
+	    margin-top: .5em;
+    margin-right: 2em;
+    display: inline-block;
 	letter-spacing: .1em;
 	font-weight: bold;
 	padding-left: 20px;
@@ -238,32 +231,22 @@ button:hover{
 
 }
 
-   #DropDownMenu,   #DropDownMenu ul{
-	letter-spacing: .1em;
-	font-weight: bold;
-	color: #eee;
+   #DropDownMenu ul{
+    margin-right: 14px;
 	}
-
-#DropDownMenu ul{
-	list-style-type: none;
-}
 
 #DropDownMenu li{
 	display: block;
 }
 
+
 #DropDownMenu a{
 	width: 100%;
-	background-color: rgba(0.2,0.2,0.2,0.2);
-
 	margin: 1px 1px 1px 1px;
-
 	padding: 0.5em 0.5em 0.5em 0.5em;
-
 	text-align: right;
 	float: right;
-	font-family: 'Alegreya SC',serif;
-
+	font-family: 'Alegreya SC',sans-serif;
 	color: rgb(240, 240,240);
 }
 

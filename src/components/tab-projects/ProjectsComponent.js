@@ -86,6 +86,7 @@ class ProjectsComponent extends React.Component{
 		return(
 			<div className="home">
 			<h1>Projects</h1>
+			{/*
 				{this.state.hasLoaded ? <div className="loader"></div>: null}
 
 				<ul>
@@ -100,6 +101,7 @@ class ProjectsComponent extends React.Component{
 					))
 				}
 				</ul>
+			*/}
 
 				
 			</div>		

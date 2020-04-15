@@ -50,17 +50,7 @@ class HomeComponent extends React.Component{
 	}
 
 	getContents(){
-		/*
-		axios.get(' https://api.github.com/repos/erikavasnormandy/ErikaVasNormandy.github.io/contents/HomePosts/firstPost.html').then(res=>{ if(res.data){ 
-		//console.log(res.data)
-		this.setState({ testcontents: res.data})
-			console.log("test contents are at the cusp:", this.state.testcontents) 
- 		}})
 		
-		.catch(err => console.log(err))
-		*/
-		/// Get first a list of all the *.html files in that directory
-///	axios.get('https://api.github.com/repos/erikavasnormandy/ErikaVasNormandy.github.io/contents/HomePosts', { headers: {Authorization: `Bearer  `}  }
 		axios.get('https://api.github.com/repos/erikavasnormandy/ErikaVasNormandy.github.io/contents/Scavengers-Repo/HomePosts', { headers: {Authorization: `Bearer ${process.env.REACT_APP_GITHUB_ACCESS_TOKEN}`}  }
 ).
 			then(res=>{ 
@@ -119,25 +109,12 @@ class HomeComponent extends React.Component{
       {/*  	<button onClick={() => this.add(10)}>Add 10</button>*/}
 
 				<h1>Home</h1>
+				{/*
 					{this.state.hasLoaded ? <div className="loader"></div>: null}
-
-					{/*{window.alert(moment(moment.now()).format('MM/DD/YYYY'))}*/}
-
-
-					{/*window.alert(moment(moment.now()).format('MM-DD-YYYY'))}}*/}
-
+				}
 
 				<ul>
-	{	/*		{this.state.queriedHTML.sort((a,b) => a.name > b.name).map(item => (*/}
-
-		{/* {this.state.queriedHTML.sort((a,b) => {
-
-				return moment(a.name).isAfter(moment(b.name)) ? -1: 1;
-			})
-*/}
-
-{/*			{this.state.queriedHTML.sort((a,b) => a.name > b.name).map(item => (
-*/}
+	
 				{this.state.queriedHTML.sort((a,b) =>a.name.localeCompare(b.name)).reverse().map(item => (
 
 						<li key={item} > 				
@@ -148,6 +125,7 @@ class HomeComponent extends React.Component{
 				}
 
 				</ul>
+			*/}
 
 
 
