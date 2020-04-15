@@ -3,6 +3,16 @@ import React, { Component } from 'react';
 import Countdown from './Countdown.js';
 
 import {styles} from './window.css';
+import bloodborneskin from './BloodborneSkin.jpg';
+import clocktower from './clocktower.JPG';
+import cosmicjar from './cosmicjar.PNG';
+import hemwick from './hemwick.JPG';
+import Meadow from './Meadow.png';
+import PrideandPrejudce from './PrideandPrejudice.png';
+import Skyartwork from './Skyartwork.png';
+import mtgisland from './mtg-island.jpeg';
+
+
 
 import susakura from './spring/steven-universe---sakura-tree.gif';
 import alpinemeadow from './spring/alpinemeadow.jpg';
@@ -19,6 +29,14 @@ import otgw2 from './autumn/over-the-garden-wall-desktop-12.png';
 
 import sucosmic from './winter/stevenuniverse-cosmic.png';
 import coldbeach from './winter/gHQr2Tr.jpg';
+
+const cosmicjarbg={
+    backgroundImage: `url(${cosmicjar})`   
+}
+
+const mtgislandbg={
+    backgroundImage: `url(${mtgisland})`   
+}
 
 
 const bg0={
@@ -90,12 +108,11 @@ class WindowComponent extends Component {
     	return (
 
     		<div>
-      		<div className = "window" style={inlineStylesArray[Math.floor(Math.random() * (inlineStylesArray.length))]}>
+      		<div className = "window" style={mtgislandbg}>
                     <h1 className="windowDisplay windowText">Scavenger's Repo</h1>
-                            <h5 className="windowDisplay"><Countdown date={`2020-09-18T00:00:00`} />
-                         </h5>
+                            <h2 className="windowDisplay windowSubtitle">A Cleaned Up Attic Full of Stuff
+                         </h2>
                     <br/>
- 					{/* <span className="windowText">{this.shuffleArray()}</span> */}
 
       		</div>
 

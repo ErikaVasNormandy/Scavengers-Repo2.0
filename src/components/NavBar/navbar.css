@@ -11,8 +11,28 @@ html, body {
     	
 }	
 .main-navigation{
-	height: 60px
-	;
+	height: 60px;
+}
+
+.headerimg {
+	background: url("Spacebunlogo.png");
+	background-position-y: -5px;
+
+     background-size: cover;
+	width: 5em;
+	
+	height: 100%;
+	float:left;
+}
+.headerimagewrapper{
+		height: 100%;
+
+}
+ .headertoptext{
+	letter-spacing: .1em;
+	font-family: 'Alegreya SC', sans-serif;
+	margin-left: 80px;
+
 }
 
 .navBar, .is-scrolled .site-header, .blog .site-header, .home .site-header {

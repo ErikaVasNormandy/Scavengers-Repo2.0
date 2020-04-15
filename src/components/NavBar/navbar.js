@@ -9,9 +9,13 @@ import AboutComponent from '../tab-about/AboutComponent'
 
 import WindowComponent from '../Window/window'
 import BusinessCardComponent from '../BusinessCard/BusinessCardComponent'
+import spacebunlogo from './SpacebunlogoCropped.png'
 
 
 import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
+const spacebunbg={
+    backgroundImage: `url(${spacebunlogo})`   
+}
 
 class NavBar extends Component {
 
@@ -40,6 +44,10 @@ class NavBar extends Component {
       <BrowserRouter>
        <div> 
 	<header className="site-header" role="banner">
+
+        <div className="headerimg"> <div className="headertoptext"><p>Scavengers' Repo</p></div></div>
+       
+
 	<button className="temp_menu" onClick={this.toggle}>menu</button>
       	<nav className ="main-navigation" id = "site-navigation">
       	      <ul className="menu nav-menu" >
