@@ -11,7 +11,6 @@ class AboutComponent extends React.Component{
       <div className ="row">
       	<div className = " columnAbout1">
       		<h2>About </h2>	
-      		<img className="profilePicture" src={trixiepixie} alt="Huh image must have moved"></img>
       		<p>Erika Hudiono is a security analyst and DevOps engineer in the Bay Area. In addition to a variety 
           of hats in the web app tech stack, she has an interest in digital painting, traditional illustration, creative writing, and the intersection
           of those hobbies.  </p>

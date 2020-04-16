@@ -18,8 +18,11 @@ class SketchbookComponent extends React.Component{
 			field: "value"
 		}
 		this.myDivToFocus = React.createRef()
+
+		this.bringBloodborneToFocus = React.createRef()
 		this.bringInkToFocus = React.createRef()
-		this.bringDigitalToFocus = React.createRef()
+		this.bringConceptArtToFocus = React.createRef()
+		this.bringBitsAndPiecesToFocus = React.createRef()
 		this.bringScrapbookToFocus = React.createRef()
 	}
 	
@@ -36,21 +39,37 @@ class SketchbookComponent extends React.Component{
 		if(this.bringInkToFocus.current){
 			this.bringInkToFocus.current.scrollIntoView({
 				behavior: "smooth",
-				block: "center"	
+				block: "start"	
 			})
 		}
 	}
-	handleDigital = (event) =>{
-		if(this.bringDigitalToFocus.current){
-			this.bringDigitalToFocus.current.scrollIntoView({
+	handleBloodborne = (event) =>{
+		if(this.bringBloodborneToFocus.current){
+			this.bringBloodborneToFocus.current.scrollIntoView({
 				behavior: "smooth",
-				block: "center"	
+				block: "start"	
+			})
+		}
+	}
+	handleConceptArt = (event) =>{
+		if(this.bringConceptArtToFocus.current){
+			this.bringConceptArtToFocus.current.scrollIntoView({
+				behavior: "smooth",
+				block: "start"	
 			})
 		}
 	}
 	handleScrapbook = (event) =>{
 		if(this.bringScrapbookToFocus.current){
 			this.bringScrapbookToFocus.current.scrollIntoView({
+				behavior: "smooth",
+				block: "start"	
+			})
+		}
+	}
+	handleBitsAndPieces = (event) =>{
+		if(this.bringBitsAndPiecesToFocus.current){
+			this.bringBitsAndPiecesToFocus.current.scrollIntoView({
 				behavior: "smooth",
 				block: "start"	
 			})
@@ -64,44 +83,54 @@ class SketchbookComponent extends React.Component{
 			<div className="sketchbook">
 
 			<h1>Sketchbook</h1>
-				<div className="tableOfContents">
+				<section>
+			{/*}Need to show the social media sharing pins */}
+				<ul><li>Artstation</li><li> Instagram</li><li> Twitter</li><li> RedBubble</li></ul>
+
 
 				<ul> 
-
-					<li><button onClick={this.handleInk}>Ink</button></li>
-					<li><button onClick={this.handleDigital}>Digital</button></li>
-					<li><button onClick={this.handleScrapbook}>Scrapbook</button></li>
+					<li><button onClick={this.handleConceptArt}>Amateur Concept Artist</button></li>
+					<li><button onClick={this.handleBloodborne}>Saturday Morning Bloodborne</button></li>
+					<li><button onClick={this.handleBitsAndPieces}>Bits and Pieces</button></li>
+					<li><button onClick={this.handleInk}>Inktober (Meatspace & Virtual)</button></li>
 				</ul>
-				</div>
+				</section>
 	
-			<p>{console.log("hello from sketchbook")}Here's a preview of what I do. You can find my full shop on <a href="https://erikavasnormandy.artstation.com">Artstation</a>, <a href="https://instagram.com/s0meCasual">Instagram</a> and <a href="https://redbubble.com/people/Technomancer-01?asc=u">RedBubble</a>.</p>
-			<p>I try to use Artstation as my main source for prints and such. RedBubble is a bit more tailored for gimmicks and whatnot.</p>	
-	<p> To do: upload some samples of art to showcase</p>
-				<h2 ref={this.bringInkToFocus}>Ink</h2>
-					<img src = {mtgisland} alt="Moved"/>
+			<p></p>
+				<h2 ref={this.bringConceptArtToFocus} alt="Moved">Amateur Concept Artist</h2>
+					<p>A picture speaks a thousand words they say. Hope I can breathe some life into 
+					the tabletop campaigns we play</p>
 
-
-					<img src = {celebrationcake} alt="Moved"/>					<img src = {porttown} alt="Moved"/>
-
-				<h2 ref={this.bringDigitalToFocus} alt="Moved">Digital</h2>
-
-					
-
-					<img src = "https://s3-us-west-1.amazonaws.com/scavengers-repo.com/tab-artwork/digital/jar_cosmic.png" alt="Moved"/>
-					<img src = "https://s3-us-west-1.amazonaws.com/scavengers-repo.com/tab-artwork/digital/RegexPiMain-+small.png" alt="Moved"/>
-
+				{/*	<img src = "https://s3-us-west-1.amazonaws.com/scavengers-repo.com/tab-artwork/digital/RegexPiMain-+small.png" alt="Moved"/>
+*/}
 					<img src = "https://s3-us-west-1.amazonaws.com/scavengers-repo.com/tab-artwork/digital/MedicineBun.png" alt="Moved"/>
 				
 					<img src ="https://s3-us-west-1.amazonaws.com/scavengers-repo.com/tab-artwork/digital/Gabriella MacAlastair.png"/>
 					<img src="https://s3-us-west-1.amazonaws.com/scavengers-repo.com/tab-artwork/digital/JJRogers.png"/>
-					<img src = "https://s3-us-west-1.amazonaws.com/scavengers-repo.com/tab-artwork/digital/LovegoodHouse.png" alt="Moved"/>
 
-					<img src="https://s3-us-west-1.amazonaws.com/scavengers-repo.com/tab-artwork/digital/White+Rabbit.jpg"/>
-					<img src = "https://s3-us-west-1.amazonaws.com/scavengers-repo.com/tab-artwork/digital/absinthe.jpg" alt="Moved"/>
+				<h2 ref={this.bringBloodborneToFocus}>Saturday Morning Bloodborne</h2>
+					<p>While I would be curious to see how Soulsborne games would look in a kid-friendly format 
+
+					to watch while eating breakfast cereal, that is unfortunately not the case. This is mainly me fumbling to 
+					learn how to emulate the artstyle of Bloodborne in particular based on the artbook that a friend gifted me last year</p>
+				
+				<h2 ref={this.bringBitsAndPiecesToFocus}>Bits And Pieces</h2>
+					<p>Scavenging from various artbooks to try out art styles and emulate work that I like. </p>
+
+					<img src = "https://s3-us-west-1.amazonaws.com/scavengers-repo.com/tab-artwork/digital/jar_cosmic.png" alt="Moved"/>
 					<img src = "https://s3-us-west-1.amazonaws.com/scavengers-repo.com/tab-artwork/digital/SekiroGourd+-+Digital+-+Large.png" alt="Moved"/>
 
-				<h2 ref={this.bringScrapbookToFocus}>Scrapbook</h2>
+					<img src = "https://s3-us-west-1.amazonaws.com/scavengers-repo.com/tab-artwork/digital/absinthe.jpg" alt="Moved"/>
+					<img src = "https://s3-us-west-1.amazonaws.com/scavengers-repo.com/tab-artwork/digital/LovegoodHouse.png" alt="Moved"/>
 
+
+				<h2 ref={this.bringInkToFocus}>Inktober (Meatspace and Virtual Editions)</h2>
+				     <p >That's right, meatspace and digital!</p>
+					<img src = {mtgisland} alt="Moved"/>
+
+
+					<img src = {celebrationcake} alt="Moved"/>					<img src = {porttown} alt="Moved"/>
+					<img src="https://s3-us-west-1.amazonaws.com/scavengers-repo.com/tab-artwork/digital/White+Rabbit.jpg"/>
 
 
 

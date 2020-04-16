@@ -7,9 +7,8 @@ import moment from 'moment';
 import {styles} from './home.css';
 import {overallstyles} from '../../App.css';
 
+import { Timeline } from 'react-twitter-widgets'
 import dotenv from 'dotenv';
-
-require('dotenv').config();
 
 class HomeComponent extends React.Component{
 	constructor(props){
@@ -27,19 +26,15 @@ class HomeComponent extends React.Component{
 		}
 		this.myDivToFocus = React.createRef()
 		this.getContents = this.getContents.bind(this);
-
   }
 
   	toggle(e){
 		this.setState({ hasLoaded: !this.state.hasLoaded });
 	
 }
- 
 	componentDidMount(){
 		this.getContents()
-
 }
-	
 	handleOnClick = (event) =>{
 		if(this.myDivToFocus.current){
 			this.myDivToFocus.current.scrollIntoView({
@@ -50,7 +45,6 @@ class HomeComponent extends React.Component{
 	}
 
 	getContents(){
-		
 		axios.get('https://api.github.com/repos/erikavasnormandy/ErikaVasNormandy.github.io/contents/Scavengers-Repo/HomePosts', { headers: {Authorization: `Bearer ${process.env.REACT_APP_GITHUB_ACCESS_TOKEN}`}  }
 ).
 			then(res=>{ 
@@ -60,15 +54,9 @@ class HomeComponent extends React.Component{
 						//htmlcontents: atob(res.data.content)
 						})
 					this.toggle()
-//					console.log(this.state.contents.length)
-					
 					var placeholder = this.state.contents.length
-
 					var newSortedArray = this.state.contents.sort((a,b)=>   a.name > b.name)
 
-		//			window.alert(JSON.stringify(newSortedArray[0]))
-//					window.alert(newSortedArray[0].name)
-					//console.log("Hello from get contents")
 					for(var i=0;i<placeholder; i++){
 						//console.log("contents are: ", this.state.contents[i])
 						var stringQuery = "https://api.github.com/repos/erikavasnormandy/ErikaVasNormandy.github.io/contents/Scavengers-Repo/HomePosts/" + this.state.contents[i].name
@@ -87,17 +75,11 @@ class HomeComponent extends React.Component{
 						})
 						.catch(err =>console.log(err))
 					}			
- 			}})
-		
+ 			}})	
 		.catch(err => console.log(err))	
 	}
 
-	
 
-
-	getHTMLContents(){
-
-	}
 
 	render()
 	{
@@ -105,11 +87,34 @@ class HomeComponent extends React.Component{
 
 		return(
 			<div className="home" >
-	
-      {/*  	<button onClick={() => this.add(10)}>Add 10</button>*/}
+				{/* <Timeline 
+					dataSource={{ 
+						sourceType: 'profile', 
+				 		screenName: 's0meCasual'}}
+				 		options={{
+				 			username: 'TwitterDev',
+				 			height: '400'
+				 		}}
+				 		onLoad={() => console.log('Timeline is loaded!')}
+				 /> */}
 
-				<h1>Home</h1>
-				{/*
+				 	<div className="HomePost">
+					<a className="twitter-timeline" 
+					/*data-tweet-limit="4" */
+					data-lang="en" 
+					width="98%" 
+					data-theme="light" 
+					data-chrome="noheader transparent"
+
+					href={"https://twitter.com/S0meCasual/timelines/1249208152895225856"}>
+					</a> 
+					<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+					</div>
+
+				{
+				/*
+								<a class="twitter-timeline" href="https://twitter.com/S0meCasual/timelines/1249208152895225856">Home Posts - Curated tweets by S0meCasual</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 					{this.state.hasLoaded ? <div className="loader"></div>: null}
 				}
 

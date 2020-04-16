@@ -1,10 +1,21 @@
 
-
+section{
+  width: 100%;
+}
 
 .sketchbook img {
 	width: 30%;
 	padding: 10px 10px 10px 10px;
 } 
+button{
+    background-color: rgba(0,0,0,0);
+    font-family: 'Alegreya SC',serif;
+    border-radius: 0px;
+}
+
+ .sketchbook p{
+  font-size: .8em;
+}
 textarea {
   padding: 5px 5px 5px 5px;
   width: 100% !important;
@@ -32,7 +43,7 @@ textarea {
 .tableOfContents ul {
 	list-style-type: none;
 	float:right;
-	display: block;
+	display: inline-block;
 }
 
 

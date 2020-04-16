@@ -3,7 +3,8 @@ import axios from 'axios';
 import TileComponent from '../BaseTile/TileComponent';
 import {styles} from '../tab-home/home.css';
 import {overallstyles} from '../../App.css';
-
+import AppMarkdown from './testmarkdown.md';
+import ReactMarkdown from 'react-markdown';
 
 class ProjectsComponent extends React.Component{
 	constructor(props){
@@ -12,16 +13,21 @@ class ProjectsComponent extends React.Component{
 			field: "value",
 			contents: "",
 			queriedHTML: [],
-			hasLoaded: true
+			hasLoaded: true,
+			terms: null
 
 		}
 		this.myDivToFocus = React.createRef()
 		this.getProjectContents = this.getProjectContents.bind(this);
 		this.toggle = this.toggle.bind(this)
+		this.createMarkup = this.createMarkup.bind(this)
+	}
+	
+	createMarkup(input){return{ __html: input}
 	}
 	
   	toggle(e){
-  				console.log(this.state.hasLoaded)
+  		console.log(this.state.hasLoaded)
 
 		this.setState({ hasLoaded: !this.state.hasLoaded });
 		console.log(this.state.hasLoaded)
@@ -42,6 +48,11 @@ class ProjectsComponent extends React.Component{
 }
 	
 
+componentWillMount() {
+    fetch(AppMarkdown).then((response) => response.text()).then((text) => {
+      this.setState({ terms: text })
+    })
+  }
 
  
 
@@ -86,6 +97,9 @@ class ProjectsComponent extends React.Component{
 		return(
 			<div className="home">
 			<h1>Projects</h1>
+			<div className="displayText" dangerouslySetInnerHTML={this.createMarkup(this.props.bodyProp)} />
+			   <ReactMarkdown source={this.state.terms}   escapeHtml={false} />
+
 			{/*
 				{this.state.hasLoaded ? <div className="loader"></div>: null}
 
