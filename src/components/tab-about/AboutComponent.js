@@ -11,9 +11,7 @@ class AboutComponent extends React.Component{
       <div className ="row">
       	<div className = " columnAbout1">
       		<h2>About </h2>	
-      		<p>Erika Hudiono is a security analyst and DevOps engineer in the Bay Area. In addition to a variety 
-          of hats in the web app tech stack, she has an interest in digital painting, traditional illustration, creative writing, and the intersection
-          of those hobbies.  </p>
+      		<p>Securing the the stack and testing the products</p>
 
           <p>If you ever want an ice breaker, just say you like rabbits, show me your rabbit pictures, or even bring one if you too are a fan of Leporidae.</p>
           <p className="tags"> Games, Neil Gaiman Comics, Folding Chair Historian, and Rabbits.</p>
@@ -25,9 +23,7 @@ class AboutComponent extends React.Component{
 
 
       	  	<h4>For Enquires: </h4>
-      	  		<p>Online Email: <a href="mailto:erikavasnormandy@gmail.com?subject=Message from Reactive.Scavengers-Repo.com Site">erikavasnormandy@gmail.com</a>  </p>
       	  		<p>Github: <a href="https://github.com/ErikaVasNormandy">Erika Vas Normandy</a></p>
-      	  		<p>Linkedin: <a href="https://www.linkedin.com/in/erika-hudiono/">Erika Hudiono</a></p>
       	  		<p>Instagram: <a href="https://www.instagram.com/s0meCasual/">S0meCasual</a></p>
 		<h2>ShopFronts</h2>
       	  		<p>RedBubble: <a href="https://redbubble.com/people/Technomancer-01/shop">Technomancer-01</a></p>

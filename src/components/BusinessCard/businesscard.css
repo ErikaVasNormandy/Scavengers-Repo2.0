@@ -60,7 +60,7 @@
 
 
 .sideMenuItem{
-    font-size: 80%;
+    font-size: 60%;
     padding: 4px 30px 4px 4px;
 
     word-wrap: break-word;
@@ -94,7 +94,7 @@
 .sideMenuText{
     margin-left: 1em;
     margin-right: 1em;
-    font-size: 95%;
+    font-size: 60%;
     line-height: 1.5;
     word-wrap: break-word;
     font-family: 'Alegreya SC',serif;

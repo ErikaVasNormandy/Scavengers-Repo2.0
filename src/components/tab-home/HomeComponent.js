@@ -87,6 +87,11 @@ class HomeComponent extends React.Component{
 
 		return(
 			<div className="home" >
+			<h1>Home</h1>
+			<section className="Commentary"><p><i>"Microblogging"</i> is how Twitter describes itself. I'm not looking to publish pages
+			and pages of content since plenty of other people have done that already, and I'd rather use other platforms specifically 
+			designed to handle some casual looking to shout out a couple words in cyberspace every now and then. </p>
+			</section>
 				{/* <Timeline 
 					dataSource={{ 
 						sourceType: 'profile', 

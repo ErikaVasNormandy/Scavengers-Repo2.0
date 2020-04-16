@@ -1,0 +1,9 @@
+.ProjectsTOC ul{
+
+}
+.ProjectsTOC li{
+ list-style-type: circle;
+ display: list-item;  
+ margin-top: 10px;
+ margin-bottom: 10px;
+}

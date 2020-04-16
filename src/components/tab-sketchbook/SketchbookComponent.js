@@ -113,7 +113,11 @@ class SketchbookComponent extends React.Component{
 
 					to watch while eating breakfast cereal, that is unfortunately not the case. This is mainly me fumbling to 
 					learn how to emulate the artstyle of Bloodborne in particular based on the artbook that a friend gifted me last year</p>
-				
+					<span title="Artstation"><a href="https://t.co/JOle8Um3BC"><img src="https://cdna.artstation.com/p/assets/images/images/025/691/350/large/erika-hudiono-asset.jpg?1586626590"></img></a></span>
+					
+					<span title="Artstation"><a href="https://artstn.co/p/Z5rD9R"><img src="https://cdna.artstation.com/p/assets/images/images/024/808/610/large/erika-hudiono-asset.jpg?1583604803" ></img>     </a></span>
+					
+					<span title="Artstation"><a href="https://artstn.co/p/Dxbdxy"><img src="https://cdna.artstation.com/p/assets/images/images/024/058/888/large/erika-hudiono-asset.jpg?1581188752"></img></a></span>
 				<h2 ref={this.bringBitsAndPiecesToFocus}>Bits And Pieces</h2>
 					<p>Scavenging from various artbooks to try out art styles and emulate work that I like. </p>
 

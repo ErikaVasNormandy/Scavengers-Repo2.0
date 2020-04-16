@@ -12,11 +12,10 @@ class BusinessCardComponent extends Component {
           alt="Huh couldn't find it"></img>
 
           
-          <div className = "sideMenuText">Mid-tier Netrunner
+          <div className = "sideMenuText">Just Some Casual on The Stack. At least I made this website from scratch!
             <ul className="sideMenuLinks">
                 <li className="sideMenuLinksLI"><a className="sideMenuLinksA" href="https://splunk.scavengers-repo.com:8000">Splunk</a></li>
-                <li className="sideMenuLinksLI"><a className="sideMenuLinksA" href="https://github.com/ErikaVasNormandy">Github</a></li>
-                <li className="sideMenuLinksLI"><a className= "sideMenuLinksA" href="https://www.linkedin.com/in/erika-hudiono-97a0285b">LinkedIn</a></li>
+                <li className="sideMenuLinksLI"><a className="sideMenuLinksA" href="https://github.com/ErikaVasNormandy">GitHub</a></li>
             </ul>
           </div>
 

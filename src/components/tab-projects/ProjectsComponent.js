@@ -1,9 +1,9 @@
 import React from 'react';
 import axios from 'axios';
 import TileComponent from '../BaseTile/TileComponent';
-import {styles} from '../tab-home/home.css';
-import {overallstyles} from '../../App.css';
-import AppMarkdown from './testmarkdown.md';
+import {styles} from './projects.css';
+// import {overallstyles} from '../../App.css';
+// import AppMarkdown from './testmarkdown.md';
 import ReactMarkdown from 'react-markdown';
 
 class ProjectsComponent extends React.Component{
@@ -15,7 +15,6 @@ class ProjectsComponent extends React.Component{
 			queriedHTML: [],
 			hasLoaded: true,
 			terms: null
-
 		}
 		this.myDivToFocus = React.createRef()
 		this.getProjectContents = this.getProjectContents.bind(this);
@@ -46,15 +45,11 @@ class ProjectsComponent extends React.Component{
 	componentDidMount(){
 		this.getProjectContents()
 }
-	
-
-componentWillMount() {
-    fetch(AppMarkdown).then((response) => response.text()).then((text) => {
-      this.setState({ terms: text })
-    })
+	componentWillMount() {
+    // fetch(AppMarkdown).then((response) => response.text()).then((text) => {
+    //   this.setState({ terms: text })
+    // })
   }
-
- 
 
 	getProjectContents(){
 		axios.get('https://api.github.com/repos/erikavasnormandy/ErikaVasNormandy.github.io/contents/Scavengers-Repo/Projects', { headers: {Authorization: `Bearer ${process.env.REACT_APP_GITHUB_ACCESS_TOKEN}`}  })
@@ -75,32 +70,30 @@ componentWillMount() {
 						if(res.data){
 							this.setState({queriedHTML: this.state.queriedHTML.concat(res.data),
 							})
-								//this.setState({ queriedHTML: this.state.queriedHTML.concat(atob(res.data.content))}E)
-								// console.log("calling from the getContents inner loop ", this.state.queriedHTML)
 							}
 						})
 						.catch(err =>console.log(err))
-					}
-					
+					}			
 
  			}})
 		
-		.catch(err => console.log(err))
-		
-	// console.log("calling from the getContents ", this.state.queriedHTML)
-
-		
+		.catch(err => console.log(err))		
 	}
 
 	render()
 	{
 		return(
-			<div className="home">
+			<div className="projects">
 			<h1>Projects</h1>
-			<div className="displayText" dangerouslySetInnerHTML={this.createMarkup(this.props.bodyProp)} />
-			   <ReactMarkdown source={this.state.terms}   escapeHtml={false} />
 
+			  <h2> WIP</h2>
+			  <ul className="ProjectsTOC">
+			  <li>Arda Hyperion</li>
+			  <li> High Tech Low Lives</li>
+			  <li> One Page Write Ups</li>
+			  </ul>
 			{/*
+				
 				{this.state.hasLoaded ? <div className="loader"></div>: null}
 
 				<ul>
@@ -115,6 +108,8 @@ componentWillMount() {
 					))
 				}
 				</ul>
+
+
 			*/}
 
 				
