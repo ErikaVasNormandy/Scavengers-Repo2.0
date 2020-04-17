@@ -100,9 +100,7 @@ class WindowComponent extends Component {
   	 }
 
 	render() {
-		// let sectionStyle = {
-		// 	backgroundImage:`url(${this.state.randImgUrl})`
-		// }}
+
 
 
     	return (
