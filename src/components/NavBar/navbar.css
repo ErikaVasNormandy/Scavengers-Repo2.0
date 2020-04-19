@@ -189,7 +189,7 @@ button:hover{
     float: right;
     display: inline-block;
     width: 80%;
-    min-height: 1vh;
+    min-height: 400px;
     font-family: 'Palatino','Palatino Linotype';
 
 }

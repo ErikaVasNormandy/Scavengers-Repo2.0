@@ -2,8 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import TileComponent from '../BaseTile/TileComponent';
 import {styles} from './projects.css';
-// import {overallstyles} from '../../App.css';
-// import AppMarkdown from './testmarkdown.md';
+import ProjectsCard from './ProjectsCard'
 import ReactMarkdown from 'react-markdown';
 
 class ProjectsComponent extends React.Component{
@@ -87,11 +86,30 @@ class ProjectsComponent extends React.Component{
 			<h1>Projects</h1>
 
 			  <h2> WIP</h2>
-			  <ul className="ProjectsTOC">
-			  <li>Arda Hyperion</li>
-			  <li> High Tech Low Lives</li>
-			  <li> One Page Write Ups</li>
-			  </ul>
+
+
+			  		<ProjectsCard 
+			  		cardtitle="One Page Write Ups"
+			  		link="https://onepagersforme.netlify.app"
+			  		briefdescription="Based on that description Chris Hadley had in his Master Class"
+			  		/>
+	<ProjectsCard
+			  		cardtitle="High Tech Low Lives"
+			  		link="https://cyberpunk2020-hightechlowlives.netlify.app"
+			  		briefdescription="Cyberpunk 2020 campaign"/>
+			  		<ProjectsCard 
+			  				 cardtitle="Arda Hyperion"
+			  				 link="https://arda-hyperion.netlify.app"
+			  				 briefdescription="Personal Project"
+
+			  		/>
+
+			  		<ProjectsCard 
+			  			cardtitle="Samurai Magicka"
+			  			link="https://samurai-magika.netlify.app"
+			  			briefdescription="Legend of the 5 Rings campaign, aka Fantasy Japan"
+			  			bgimg="https://cdna.artstation.com/p/assets/images/images/015/546/398/large/kekentang-_-cake.jpg"
+			  			/>
 			{/*
 				
 				{this.state.hasLoaded ? <div className="loader"></div>: null}
