@@ -90,7 +90,7 @@ class ProjectsComponent extends React.Component{
 
 			  		<ProjectsCard 
 			  		cardtitle="One Page Write Ups"
-			  		link="https://onepagersforme.netlify.app"
+			  		link="https://technomancers-gambit.netlify.app"
 			  		briefdescription="Based on that description Chris Hadley had in his Master Class"
 			  		bgimg="http://www.archaeology.wiki/wp-content/uploads/2014/11/spellbook-1.jpg"
 			  		/>
@@ -98,7 +98,7 @@ class ProjectsComponent extends React.Component{
 
 					<ProjectsCard
 			  		cardtitle="High Tech Low Lives"
-			  		link="https://cyberpunk2020-hightechlowlives.netlify.app"
+			  		link="https://high-tech-low-lives.netlify.app"
 			  		briefdescription="Cyberpunk 2020 campaign"
 			  		bgimg="https://wallpapertag.com/wallpaper/full/8/6/f/433826-most-popular-blade-runner-wallpapers-1920x1080.jpg"
 			  		/>
