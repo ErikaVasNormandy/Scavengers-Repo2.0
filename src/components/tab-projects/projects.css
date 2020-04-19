@@ -16,7 +16,16 @@
 	text-align: center;
 	display:inline-flex;
 	border-width:2px;
-	margin: 2px 2px 2px 2px;
+	margin: 10px 10px 10px 10px;
+	background-size: cover;
+	  box-shadow: 5px 5px;
+
+}
+
+
+.projectCard a{
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
 }
 .projectTitle{
   vertical-align: middle; 

@@ -92,23 +92,33 @@ class ProjectsComponent extends React.Component{
 			  		cardtitle="One Page Write Ups"
 			  		link="https://onepagersforme.netlify.app"
 			  		briefdescription="Based on that description Chris Hadley had in his Master Class"
+			  		bgimg="http://www.archaeology.wiki/wp-content/uploads/2014/11/spellbook-1.jpg"
 			  		/>
-	<ProjectsCard
+
+
+					<ProjectsCard
 			  		cardtitle="High Tech Low Lives"
 			  		link="https://cyberpunk2020-hightechlowlives.netlify.app"
-			  		briefdescription="Cyberpunk 2020 campaign"/>
+			  		briefdescription="Cyberpunk 2020 campaign"
+			  		bgimg="https://wallpapertag.com/wallpaper/full/8/6/f/433826-most-popular-blade-runner-wallpapers-1920x1080.jpg"
+			  		/>
+
+
 			  		<ProjectsCard 
 			  				 cardtitle="Arda Hyperion"
 			  				 link="https://arda-hyperion.netlify.app"
 			  				 briefdescription="Personal Project"
+			  				 bgimg="https://cdnb.artstation.com/p/assets/images/images/004/036/061/large/roxsalomon-.jpg?1479717097"
+
 
 			  		/>
+
 
 			  		<ProjectsCard 
 			  			cardtitle="Samurai Magicka"
 			  			link="https://samurai-magika.netlify.app"
 			  			briefdescription="Legend of the 5 Rings campaign, aka Fantasy Japan"
-			  			bgimg="https://cdna.artstation.com/p/assets/images/images/015/546/398/large/kekentang-_-cake.jpg"
+			  			bgimg="https://i.ytimg.com/vi/o90uAvZLDBQ/maxresdefault.jpg"
 			  			/>
 			{/*
 				

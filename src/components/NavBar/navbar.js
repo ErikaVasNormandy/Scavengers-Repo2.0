@@ -4,7 +4,7 @@ import {styles} from './navbar.css';
 import HomeComponent from '../tab-home/HomeComponent'
 import ProjectsComponent from '../tab-projects/ProjectsComponent'
 import SketchbookComponent from '../tab-sketchbook/SketchbookComponent'
-import WorldBuildingComponent from '../tab-worldbuilding/WorldBuildingComponent'
+// import WorldBuildingComponent from '../tab-worldbuilding/WorldBuildingComponent'
 import AboutComponent from '../tab-about/AboutComponent'
 
 import WindowComponent from '../Window/window'
@@ -62,10 +62,11 @@ class NavBar extends Component {
       			<li className = "menu-item menu-item-type-custom menu-item-object-custom">
               			<Link to="/sketchbook">Sketchbook</Link>
       			</li>
-
+{/*
       			<li className = "menu-item menu-item-type-custom menu-item-object-custom">
        				<Link to="/worldbuilding">Worldbuilding</Link>
       			</li>
+*/}
 
       			<li className = "menu-item menu-item-type-custom menu-item-object-custom">
        				<Link to="/about">About</Link>
@@ -92,9 +93,10 @@ class NavBar extends Component {
       			<li className = "menu-item menu-item-type-custom menu-item-object-custom">
 							<Link to="/sketchbook" >Sketchbook</Link>
 						</li>
+{/*
       			<li className = "menu-item menu-item-type-custom menu-item-object-custom">
 							<Link to="/worldbuilding" >Worldbuilding</Link>
-						</li>
+</li>*/}
       			<li className = "menu-item menu-item-type-custom menu-item-object-custom">
 							<Link to="/about" >About</Link>
 						</li>
@@ -125,7 +127,7 @@ class NavBar extends Component {
                   <Route exact path = "/" component={HomeComponent} />
         	        <Route exact path="/projects" component={ProjectsComponent} />
         	        <Route exact path="/sketchbook" component={SketchbookComponent} />
-        	        <Route exact path="/worldbuilding" component={WorldBuildingComponent}/>
+        	      {/*  <Route exact path="/worldbuilding" component={WorldBuildingComponent}/> */}
         	        <Route exact path="/about" component={AboutComponent} />
                </div>
             </Switch>
