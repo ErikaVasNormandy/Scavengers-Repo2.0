@@ -26,11 +26,8 @@ class ProjectsCard extends React.Component{
 
 
 	componentDidMount(){
-
-
 }
 	componentWillMount() {
-
   }
 
 	render()
