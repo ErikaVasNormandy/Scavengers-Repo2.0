@@ -88,9 +88,7 @@ class HomeComponent extends React.Component{
 		return(
 			<div className="home" >
 			<h1>Home</h1>
-			<section className="Commentary"><p><i>"Microblogging"</i> is how Twitter describes itself. I'm not looking to publish pages
-			and pages of content since plenty of other people have done that already, and I'd rather use other platforms specifically 
-			designed to handle some casual looking to shout out a couple words in cyberspace every now and then. </p>
+			<section className="Commentary"><p>Hi! You've found my old scrapbooking site. I've moved to a new domain at <a href="https://technomancer-01.artstation.com">technomancer-01.com</a>. I'm also usually on Instagram @Technomancer_One and Twitter @technomancer_01. My main shop is on Redbubble as Technomancer-01.</p> <p>It was a good run and I certainly learned a lot from setting up this site from scratch, but I've migrated towards something that will require a lot less upkeep and let me focus more on the content itself. </p>
 			</section>
 				{/* <Timeline 
 					dataSource={{ 
