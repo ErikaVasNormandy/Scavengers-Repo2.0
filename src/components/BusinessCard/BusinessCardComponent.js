@@ -12,15 +12,14 @@ class BusinessCardComponent extends Component {
           alt="Huh couldn't find it"></img>
 
           
-          <div className = "sideMenuText">	<i>Traversing the interwebs like it's already 2020</i>".  <p>Wait</p>
+          <div className = "sideMenuText">	<p>Where to Find Me</p>
 
             <ul className="sideMenuLinks">
                 <li className="sideMenuLinksLI"> <a className="sideMenuLinksA" href="https://erikavasnormandy.artstation.com">Artstation</a></li>
-
-      	  		<li className="sideMenuLinksLI"> <a className="sideMenuLinksA" href="https://www.instagram.com/s0meCasual/">Instagram</a></li>
+      	  	<li className="sideMenuLinksLI"> <a className="sideMenuLinksA" href="https://www.instagram.com/technomancer_one/">Instagram</a></li>
                 <li className="sideMenuLinksLI"><a className="sideMenuLinksA" href="https://github.com/ErikaVasNormandy">GitHub</a></li>
-                <li className="sideMenuLinksLI"><a className="sideMenuLinksA" href="https://twitter.com/S0meCasual">Twitter</a></li>
-
+                <li className="sideMenuLinksLI"><a className="sideMenuLinksA" href="https://twitter.com/Technomancer_01">Twitter</a></li>
+                <li className="sideMenuLinksLI"><a className="sideMenuLinksA" href="https://www.redbubble.com/people/Technomancer-01/shop?asc=u">RedBubble</a></li>		
             </ul>
           </div>
 
