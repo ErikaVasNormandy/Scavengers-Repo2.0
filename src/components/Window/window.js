@@ -107,8 +107,8 @@ class WindowComponent extends Component {
 
     		<div>
       		<div className = "window" style={mtgislandbg}>
-                    <h1 className="windowDisplay windowText">Scavenger's Repo -> <a href="https://www.technomancer-01.com">technomancer-01.com</a></h1>
-                            <h2 className="windowDisplay windowSubtitle">The Website Has Moved!
+                    <h1 className="windowDisplay windowText">Scavenger's Repo</h1>
+                            <h2 className="windowDisplay windowSubtitle">The Website Has Moved to <a href="https://www.technomancer-01.com">technomancer-01.com</a>
                          </h2>
                     <br/>
 
