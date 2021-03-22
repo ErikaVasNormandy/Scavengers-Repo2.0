@@ -93,7 +93,7 @@ class WindowComponent extends Component {
     
   		this.state = {
         time: moment().format('ddd LTS'),
-  			imgUrl: "https://s3-us-west-1.amazonaws.com/scavengers-repo.com/images/WinterMoodBoard/gHQr2Tr.jpg",
+  			imgUrl: "https://s3-us-west-1.amazonaws.com/scavengers-repo.com/technomancer-one/NightCity-Evening.jpg",
 
   		}
 
