@@ -45,7 +45,7 @@ class NavBar extends Component {
        <div> 
 	<header className="site-header" role="banner">
 
-        <div className="headerimg"> <div className="headertoptext"><p>Scavengers' Repo</p></div></div>
+        <div className="headerimg"> <div className="headertoptext"><p>Scavenger's Repo</p></div></div>
        
 
 	<button className="temp_menu" onClick={this.toggle}>menu</button>
