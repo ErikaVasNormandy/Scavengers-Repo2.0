@@ -3,7 +3,6 @@ import {styles} from './sketchbook.css';
 import absinthe from './digital/absinthe.jpg';
 import cosmicjar from './digital/jar_cosmic.png';
 import medicinebun from './digital/MedicineBun.png';
-import PlagueTale1 from './digital/PlagueTale1.png';
 import sekirogourd from './digital/SekiroGourd - Digital - Large.png';
 
 import celebrationcake from './ink/celebrationcake.jpg';
