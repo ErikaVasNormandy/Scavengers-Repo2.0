@@ -90,7 +90,7 @@ class SketchbookComponent extends React.Component{
 
 		
 					<button onClick={this.handleConceptArt}>Amateur Concept Artist</button>
-					<button onClick={this.handleBloodborne}>Saturday Morning Bloodborne</button><
+					<button onClick={this.handleBloodborne}>Saturday Morning Bloodborne</button>
 					<button onClick={this.handleBitsAndPieces}>Bits and Pieces</button>
 					<button onClick={this.handleInk}>Inktober (Meatspace & Virtual)</button>
 		
