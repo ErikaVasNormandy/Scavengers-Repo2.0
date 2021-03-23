@@ -101,12 +101,11 @@ class SketchbookComponent extends React.Component{
 					<p>A picture speaks a thousand words they say. Hope I can breathe some life into 
 					the tabletop campaigns we play</p>
 
-				{/*	<img src = "https://s3-us-west-1.amazonaws.com/scavengers-repo.com/tab-artwork/digital/RegexPiMain-+small.png" alt="Moved"/>
-*/}
+					<img src = "https://s3-us-west-1.amazonaws.com/scavengers-repo.com/tab-artwork/digital/RegexPiMain-+small.png" alt="Moved"/>
+
 					<img src = "https://s3-us-west-1.amazonaws.com/scavengers-repo.com/tab-artwork/digital/MedicineBun.png" alt="Moved"/>
 				
 					<img src ="https://s3-us-west-1.amazonaws.com/scavengers-repo.com/tab-artwork/digital/Gabriella MacAlastair.png"/>
-					<img src="https://s3-us-west-1.amazonaws.com/scavengers-repo.com/tab-artwork/digital/JJRogers.png"/>
 
 				<h2 ref={this.bringBloodborneToFocus}>Saturday Morning Bloodborne</h2>
 					<p>While I would be curious to see how Soulsborne games would look in a kid-friendly format 
@@ -125,7 +124,6 @@ class SketchbookComponent extends React.Component{
 					<img src = "https://s3-us-west-1.amazonaws.com/scavengers-repo.com/tab-artwork/digital/SekiroGourd+-+Digital+-+Large.png" alt="Moved"/>
 
 					<img src = "https://s3-us-west-1.amazonaws.com/scavengers-repo.com/tab-artwork/digital/absinthe.jpg" alt="Moved"/>
-					<img src = "https://s3-us-west-1.amazonaws.com/scavengers-repo.com/tab-artwork/digital/LovegoodHouse.png" alt="Moved"/>
 
 
 				<h2 ref={this.bringInkToFocus}>Inktober (Meatspace and Virtual Editions)</h2>
@@ -133,8 +131,9 @@ class SketchbookComponent extends React.Component{
 					<img src = {mtgisland} alt="Moved"/>
 
 
-					<img src = {celebrationcake} alt="Moved"/>					<img src = {porttown} alt="Moved"/>
-					<img src="https://s3-us-west-1.amazonaws.com/scavengers-repo.com/tab-artwork/digital/White+Rabbit.jpg"/>
+					<img src = {celebrationcake} alt="Moved"/>					
+					<img src = {porttown} alt="Moved"/>
+				
 
 
 
