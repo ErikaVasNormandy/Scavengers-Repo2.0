@@ -89,36 +89,30 @@ class SketchbookComponent extends React.Component{
 
 
 		
-					<button onClick={this.handleConceptArt}>Amateur Concept Artist</button>
+					<button onClick={this.handleConceptArt}>Concept Art</button>
 					<button onClick={this.handleBloodborne}>Saturday Morning Bloodborne</button>
 					<button onClick={this.handleBitsAndPieces}>Bits and Pieces</button>
-					<button onClick={this.handleInk}>Inktober (Meatspace & Virtual)</button>
+					<button onClick={this.handleInk}>Inktober</button>
 		
 				</section>
 	
 			<p></p>
-				<h2 ref={this.bringConceptArtToFocus} alt="Moved">Amateur Concept Artist</h2>
-					<p>A picture speaks a thousand words they say. Hope I can breathe some life into 
-					the tabletop campaigns we play</p>
+				<h2 ref={this.bringConceptArtToFocus} alt="Moved">Amateur Concept Art</h2>
 
-					<img src = "https://s3-us-west-1.amazonaws.com/scavengers-repo.com/tab-artwork/digital/RegexPiMain-+small.png" alt="Moved"/>
+					<img src = "https://s3-us-west-1.amazonaws.com/scavengers-repo.com/technomancer-one/NightCity-Evening.jpg" alt="Moved"/>
 
 					<img src = "https://s3-us-west-1.amazonaws.com/scavengers-repo.com/tab-artwork/digital/MedicineBun.png" alt="Moved"/>
 				
 					<img src ="https://s3-us-west-1.amazonaws.com/scavengers-repo.com/tab-artwork/digital/Gabriella MacAlastair.png"/>
 
 				<h2 ref={this.bringBloodborneToFocus}>Saturday Morning Bloodborne</h2>
-					<p>While I would be curious to see how Soulsborne games would look in a kid-friendly format 
-
-					to watch while eating breakfast cereal, that is unfortunately not the case. This is mainly me fumbling to 
-					learn how to emulate the artstyle of Bloodborne in particular based on the artbook that a friend gifted me last year</p>
+					
 					<span title="Artstation"><a href="https://t.co/JOle8Um3BC"><img src="https://cdna.artstation.com/p/assets/images/images/025/691/350/large/erika-hudiono-asset.jpg?1586626590"></img></a></span>
 					
 					<span title="Artstation"><a href="https://artstn.co/p/Z5rD9R"><img src="https://cdna.artstation.com/p/assets/images/images/024/808/610/large/erika-hudiono-asset.jpg?1583604803" ></img>     </a></span>
 					
 					<span title="Artstation"><a href="https://artstn.co/p/Dxbdxy"><img src="https://cdna.artstation.com/p/assets/images/images/024/058/888/large/erika-hudiono-asset.jpg?1581188752"></img></a></span>
 				<h2 ref={this.bringBitsAndPiecesToFocus}>Bits And Pieces</h2>
-					<p>Scavenging from various artbooks to try out art styles and emulate work that I like. </p>
 
 					<img src = "https://s3-us-west-1.amazonaws.com/scavengers-repo.com/tab-artwork/digital/jar_cosmic.png" alt="Moved"/>
 					<img src = "https://s3-us-west-1.amazonaws.com/scavengers-repo.com/tab-artwork/digital/SekiroGourd+-+Digital+-+Large.png" alt="Moved"/>
@@ -126,16 +120,13 @@ class SketchbookComponent extends React.Component{
 					<img src = "https://s3-us-west-1.amazonaws.com/scavengers-repo.com/tab-artwork/digital/absinthe.jpg" alt="Moved"/>
 
 
-				<h2 ref={this.bringInkToFocus}>Inktober (Meatspace and Virtual Editions)</h2>
+				<h2 ref={this.bringInkToFocus}>Inktober</h2>
 				     <p >That's right, meatspace and digital!</p>
 					<img src = {mtgisland} alt="Moved"/>
 
 
 					<img src = {celebrationcake} alt="Moved"/>					
 					<img src = {porttown} alt="Moved"/>
-				
-
-
 
 			</div>		
 		);
