@@ -85,15 +85,15 @@ class SketchbookComponent extends React.Component{
 			<h1>Sketchbook</h1>
 				<section>
 			{/*}Need to show the social media sharing pins */}
-				<ul><li>Artstation</li><li> Instagram</li><li> Twitter</li><li> RedBubble</li></ul>
+			
 
 
-				<ul> 
-					<li><button onClick={this.handleConceptArt}>Amateur Concept Artist</button></li>
-					<li><button onClick={this.handleBloodborne}>Saturday Morning Bloodborne</button></li>
-					<li><button onClick={this.handleBitsAndPieces}>Bits and Pieces</button></li>
-					<li><button onClick={this.handleInk}>Inktober (Meatspace & Virtual)</button></li>
-				</ul>
+		
+					<button onClick={this.handleConceptArt}>Amateur Concept Artist</button>
+					<button onClick={this.handleBloodborne}>Saturday Morning Bloodborne</button><
+					<button onClick={this.handleBitsAndPieces}>Bits and Pieces</button>
+					<button onClick={this.handleInk}>Inktober (Meatspace & Virtual)</button>
+		
 				</section>
 	
 			<p></p>
